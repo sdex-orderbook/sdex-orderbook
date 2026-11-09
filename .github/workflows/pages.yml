@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Build the demo + docs from committed fixtures and publish to GitHub Pages.
-# Repo must be named <org>.github.io so the app is at / and the docs at /docs/.
+# Repo is named sdex-orderbook, so Pages serves a project page: app at /sdex-orderbook/, docs at /sdex-orderbook/docs/.
 name: pages
 on:
   push:
@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: 22
       - run: bash scripts/build-demo.sh
+        env:
+          # Project page: served at /sdex-orderbook/, so the docs base needs the repo prefix.
+          SDX_DOCS_BASE: /sdex-orderbook/docs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
