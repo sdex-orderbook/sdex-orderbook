@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: Apache-2.0
+# /etc/systemd/system/sdx.service. Adjust User and paths. Local bind only: nginx fronts it.
+[Unit]
+Description=sdx serve (read-only SDEX order book from ledger data)
+After=network-online.target
+
+[Service]
+User=sdx
+ExecStart=/opt/sdx/sdx serve --state /var/lib/sdx/state --addr 127.0.0.1:8000 --follow
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/sdx
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

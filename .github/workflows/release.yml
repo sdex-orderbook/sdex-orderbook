@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: Apache-2.0
+# On a v* tag: run the offline checks, build the sdx binary, attach it to a release.
+name: release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  linux-x86_64:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/check.sh
+      - run: cargo build --release -p sik-sdex-orderbook-cli
+      - run: |
+          mkdir dist
+          cp target/release/sdx dist/
+          cp NOTICE README.md dist/
+          tar -C dist -czf sdx-${GITHUB_REF_NAME}-x86_64-linux.tar.gz .
+          sha256sum sdx-${GITHUB_REF_NAME}-x86_64-linux.tar.gz > sdx-${GITHUB_REF_NAME}-x86_64-linux.tar.gz.sha256
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            sdx-*.tar.gz
+            sdx-*.sha256
