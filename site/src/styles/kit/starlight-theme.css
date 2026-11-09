@@ -1,0 +1,171 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/*
+ * Starlight theme for kit docs sites. Maps Starlight's --sl-* custom properties
+ * onto the kit tokens so a docs site and a project's app read as one family.
+ *
+ * Usage (astro.config.mjs, see astro.config.example.mjs in this folder):
+ *   starlight({
+ *     customCss: [
+ *       '@fontsource-variable/geist',
+ *       '@fontsource-variable/geist-mono',
+ *       './src/styles/kit/tokens.css',
+ *       './src/styles/kit/starlight-theme.css',
+ *     ],
+ *   })
+ *
+ * How it works: Starlight declares its variables inside `@layer starlight.base`.
+ * Everything here is unlayered, so it wins without !important. The --sik-*
+ * tokens already flip between light and dark on the `data-theme` attribute that
+ * Starlight writes to <html>, so one block covers both modes.
+ *
+ * Verified 2026-11-08 against astro 7.4.2 + @astrojs/starlight 0.42.7
+ * (props.css variable names read from the installed package; site built and
+ * screenshotted in both modes).
+ */
+
+:root {
+  /* Type */
+  --sl-font: var(--sik-font-sans);
+  --sl-font-mono: var(--sik-font-mono);
+  --sl-line-height: 1.7;
+  --sl-line-height-headings: 1.2;
+
+  /* Neutral ramp. Starlight's ramp runs white (strongest text) -> black (page
+     background) and inverts in light mode; the kit tokens invert themselves. */
+  --sl-color-white: var(--sik-ink);
+  --sl-color-gray-1: var(--sik-ink);
+  --sl-color-gray-2: var(--sik-ink-2);
+  --sl-color-gray-3: var(--sik-ink-3);
+  --sl-color-gray-4: color-mix(in oklab, var(--sik-ink-3) 55%, var(--sik-line-strong));
+  --sl-color-gray-5: var(--sik-line-strong);
+  --sl-color-gray-6: var(--sik-sunken);
+  --sl-color-gray-7: var(--sik-sunken);
+  --sl-color-black: var(--sik-surface);
+
+  /* Accent: the project accent, chrome only (links, current page, focus). */
+  --sl-color-accent-low: var(--sik-accent-wash);
+  --sl-color-accent: var(--sik-accent);
+  --sl-color-accent-high: var(--sik-accent);
+
+  /* Semantic surfaces */
+  --sl-color-text: var(--sik-ink-2);
+  --sl-color-text-accent: var(--sik-accent);
+  --sl-color-text-invert: var(--sik-ink-inverse);
+  --sl-color-bg: var(--sik-surface);
+  --sl-color-bg-nav: var(--sik-surface);
+  --sl-color-bg-sidebar: var(--sik-canvas);
+  --sl-color-bg-inline-code: var(--sik-sunken);
+  --sl-color-bg-accent: var(--sik-accent);
+  --sl-color-hairline-light: var(--sik-line);
+  --sl-color-hairline: var(--sik-line);
+  --sl-color-hairline-shade: var(--sik-line);
+  --sl-color-backdrop-overlay: color-mix(in oklab, var(--sik-canvas) 70%, transparent);
+
+  /* Asides. Starlight hues are re-pointed at the kit status roles so asides
+     mean the same thing as badges: note = accent, tip = good,
+     caution = warning, danger = critical. Purple is used by Starlight for
+     "tip"; it is mapped to good, not to a purple. */
+  --sl-color-blue-low: var(--sik-accent-wash);
+  --sl-color-blue: var(--sik-accent);
+  --sl-color-blue-high: var(--sik-accent);
+  --sl-color-purple-low: var(--sik-good-wash);
+  --sl-color-purple: var(--sik-good-ring);
+  --sl-color-purple-high: var(--sik-good-ink);
+  --sl-color-green-low: var(--sik-good-wash);
+  --sl-color-green: var(--sik-good-ring);
+  --sl-color-green-high: var(--sik-good-ink);
+  --sl-color-orange-low: var(--sik-warning-wash);
+  --sl-color-orange: var(--sik-warning-ring);
+  --sl-color-orange-high: var(--sik-warning-ink);
+  --sl-color-red-low: var(--sik-critical-wash);
+  --sl-color-red: var(--sik-critical-ring);
+  --sl-color-red-high: var(--sik-critical-ink);
+
+  /* Depth */
+  --sl-shadow-sm: var(--sik-shadow-1);
+  --sl-shadow-md: var(--sik-shadow-2);
+  --sl-shadow-lg: var(--sik-shadow-3);
+
+  /* Layout: a slightly wider measure for tables of measured values. */
+  --sl-content-width: 48rem;
+}
+
+/* The 2px accent rule on top of the header: the same signature as the app shell. */
+header.header {
+  box-shadow: inset 0 2px 0 0 var(--sik-accent);
+}
+
+/* Site title: kit weight and tracking instead of Starlight's accent-coloured title. */
+.site-title {
+  color: var(--sik-ink);
+  font-size: var(--sik-text-base);
+  letter-spacing: -0.01em;
+}
+
+/* Headings: tight tracking, balanced wrapping, primary ink. */
+.sl-markdown-content :is(h1, h2, h3, h4),
+h1#_top {
+  color: var(--sik-ink);
+  letter-spacing: var(--sik-tracking-tight);
+  text-wrap: balance;
+}
+.sl-markdown-content :is(p, li) {
+  text-wrap: pretty;
+}
+
+/* Links: accent, underline on a fixed offset. */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  color: var(--sik-accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Tables carry measured values: tabular figures, sunken header, hairlines. */
+.sl-markdown-content table:not(:where(.not-content *)) {
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-size: var(--sik-text-sm);
+  border-collapse: collapse;
+}
+.sl-markdown-content th:not(:where(.not-content *)) {
+  background: var(--sik-sunken);
+  color: var(--sik-ink-2);
+  font-weight: 500;
+  font-size: var(--sik-text-xs);
+}
+.sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+  border-bottom: 1px solid var(--sik-line);
+}
+
+/* Inline code: mono, sunken well, xs radius. */
+.sl-markdown-content code:not(:where(.not-content *, pre *)) {
+  border-radius: var(--sik-radius-xs);
+  padding: 0.1em 0.35em;
+}
+
+/* Current sidebar item: accent wash, accent text (same as the app sidebar),
+   instead of Starlight's solid accent fill. */
+.sidebar-content a[aria-current='page'] {
+  background-color: var(--sik-accent-wash);
+  color: var(--sik-accent);
+  font-weight: 600;
+}
+
+/* Focus ring matches the app. */
+:focus-visible {
+  outline: 2px solid var(--sik-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--sik-accent-wash);
+  color: var(--sik-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

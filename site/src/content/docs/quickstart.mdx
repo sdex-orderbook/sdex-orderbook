@@ -1,0 +1,64 @@
+---
+title: Quickstart
+description: Build sdx, bootstrap a mainnet state, replay ledgers and serve Horizon-shaped endpoints.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+import ProvenanceChip from '../../components/kit/ProvenanceChip.astro';
+import f from '../../data/facts.json';
+
+Everything below reads public data only: the SDF history archive, the AWS public Galexie lake and, for `sdx diff`, horizon.stellar.org. Nothing is signed or sent.
+
+## Build
+
+```sh
+cd projects/sdex-orderbook          # rust-toolchain.toml pins Rust 1.97.1
+cargo build -p sik-sdex-orderbook-cli   # binary: target/debug/sdx
+bash scripts/check.sh               # fmt --check, clippy -D warnings, offline tests
+```
+
+The dev profile optimises the hot crates (gzip, SHA-256, zstd, XDR). A release build (`cargo build --release`) has not been measured yet.
+
+## Bootstrap from the history archive
+
+```sh
+sdx bootstrap --out data/state --cache data/bucket-cache
+```
+
+This is the expensive step. The recorded run read {f.bootstrap.gb} GB of uncompressed bucket data over {f.bootstrap.buckets} buckets and peaked at {f.bootstrap.peakRssMiB.toLocaleString('en-US')} MiB of memory. The cold run took about 82 minutes in two attempts on a shared 4-core machine. <ProvenanceChip kind="recorded" ledger={f.bootstrap.checkpoint} date={f.stateDate} source="fixtures/runs" />
+
+Per-bucket extracts are cached by content hash, so a later bootstrap downloads only buckets that changed.
+
+## Replay to the network head
+
+```sh
+sdx replay --state data/state --to head
+```
+
+The recorded replay applied {f.replay.ledgers.toLocaleString('en-US')} ledgers with a median apply time of {f.replay.medianMs} ms per ledger (debug build). Throughput on that machine averaged 0.62 ledgers per second against about 0.18 per second closed by the network, so it catches up. <ProvenanceChip kind="recorded" ledger={f.replay.to} date={f.stateDate} />
+
+## Query
+
+```sh
+sdx order-book --state data/state --selling native \
+  --buying USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN
+
+sdx trade-aggregations --state data/state --base native \
+  --counter USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN --resolution 60000
+```
+
+## Serve
+
+```sh
+sdx serve --state data/state --addr 127.0.0.1:8000 --follow
+curl -i 'http://127.0.0.1:8000/order_book?selling_asset_type=native&buying_asset_type=credit_alphanum4&buying_asset_code=USDC&buying_asset_issuer=GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN&limit=5'
+```
+
+Responses carry a `Latest-Ledger` header like Horizon. `--follow` keeps applying new lake ledgers while serving (not soak-tested). The server is meant for local use: `std::net`, GET only, one thread per connection, no TLS, no per-client rate limiting, and it answers `Access-Control-Allow-Origin: *` (the data is public, but any web page you open can query a server on your loopback). It has socket timeouts, line and header size caps, and caps on connections (64) and concurrent route computations (4), but no deadline on `/paths`. Do not expose it to a network without a reverse proxy that adds TLS, rate limits and timeouts.
+
+## Check against Horizon
+
+```sh
+sdx diff --state data/state --out fixtures/diff/$(date -u +%Y%m%dT%H%MZ) --auto 8
+```
+
+See [Differential check](../diff/).

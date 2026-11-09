@@ -1,0 +1,43 @@
+---
+title: sdx
+description: Horizon-compatible SDEX order book, path finding and trade aggregations rebuilt from Stellar ledger data. Read-only, unaudited.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+import GateBadge from '../../components/kit/GateBadge.astro';
+import GateNotice from '../../components/kit/GateNotice.astro';
+import ProvenanceChip from '../../components/kit/ProvenanceChip.astro';
+import f from '../../data/facts.json';
+
+<GateBadge kind="mainnet-read-only" /> <GateBadge kind="unaudited" /> <GateBadge kind="not-yet-available" label="Path parity: not yet" />
+
+`sdx` rebuilds the Stellar DEX (SDEX) without Horizon. It reads offers and classic liquidity pools from history-archive buckets at a checkpoint, then applies every later ledger from the public Galexie lake. It derives trades from transaction results and serves the result with Horizon's request and response shapes:
+
+- `GET /order_book`
+- `GET /trade_aggregations`
+- `GET /paths/strict-send`, `GET /paths/strict-receive`
+
+It is a Rust library, a CLI and a small local HTTP server. It never signs or sends anything.
+
+On recorded mainnet captures, **{f.orderBooks.equal} of {f.orderBooks.cases} order books** were identical to horizon.stellar.org at the same ledger, and so were **{f.aggregations.equal} of {f.aggregations.cases} trade aggregation windows**. <ProvenanceChip kind="recorded" date={f.runs[0].date} source="fixtures/diff (2 runs)" />
+
+<GateNotice tone="warning" title="Path finding does not match Horizon yet.">
+  {f.pathsWithPools.equal} of {f.pathsWithPools.cases} path cases were identical with pools. Do not rely on `/paths` output. See [Status and limits](./limits/) and ticket SDX-012.
+</GateNotice>
+
+## Who it is for
+
+- Wallets, SDKs and market-data services that call Horizon's DEX endpoints and want a source they can run and verify themselves.
+- Teams leaving Horizon for RPC: the SDF Horizon-to-RPC endpoint mapping lists no RPC method for order books, payment paths or trade aggregations [P: developers.stellar.org/docs/data/apis/migrate-from-horizon-to-rpc, read 2026-11-08].
+- Reviewers who want to check DEX data against the ledger rather than trust an API.
+
+## How the state is built
+
+1. **Bootstrap.** Download the live buckets named in the history archive state (HAS) at a checkpoint, keep only offer and pool entries, and check the HAS against the checkpoint ledger header's `bucket_list_hash`. Checkpoint {f.bootstrap.checkpoint.toLocaleString('en-US')}: {f.bootstrap.offers.toLocaleString('en-US')} offers, {f.bootstrap.pools.toLocaleString('en-US')} pools, {f.bootstrap.gb} GB of bucket data read. <ProvenanceChip kind="recorded" ledger={f.bootstrap.checkpoint} date={f.stateDate} />
+2. **Replay.** Apply each `LedgerCloseMeta` from the lake in order and compare every offer and pool STATE pre-image with the held entry. {f.replay.ledgers.toLocaleString('en-US')} ledgers, {f.replay.checked.toLocaleString('en-US')} pre-images checked, {f.replay.mismatch} mismatches. <ProvenanceChip kind="recorded" ledger={f.replay.to} date={f.stateDate} />
+3. **Serve and diff.** `sdx serve` answers the endpoints; `sdx diff` records Horizon's body and `Latest-Ledger`, replays to that ledger, and compares.
+
+## Next
+
+- [Quickstart](./quickstart/): build, bootstrap, replay, serve.
+- [HTTP API](./http-api/): parameters and every known difference from Horizon.
+- [Differential check](./diff/): how the evidence was recorded.

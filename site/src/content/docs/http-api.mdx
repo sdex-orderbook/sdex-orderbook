@@ -1,0 +1,47 @@
+---
+title: HTTP API
+description: Endpoints, parameters, errors and every known difference from Horizon.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+import GateNotice from '../../components/kit/GateNotice.astro';
+
+`sdx serve` answers GET requests with Horizon's parameter names and response bodies. Every response carries `Latest-Ledger` (the state ledger), `Access-Control-Allow-Origin: *` and `Access-Control-Expose-Headers: Latest-Ledger`, so a browser page can read it.
+
+| Endpoint | Horizon equivalent | Parity on recorded captures |
+|---|---|---|
+| `GET /order_book` | same | identical |
+| `GET /trade_aggregations` | same | identical |
+| `GET /paths/strict-send` | same | **does not match yet** |
+| `GET /paths/strict-receive`, `GET /paths` | same | **does not match yet** |
+| `GET /` | none | service status (not Horizon-shaped) |
+
+## /order_book
+
+`selling_asset_*`, `buying_asset_*`, `limit` (default 20, max 200). Asks are offers selling the selling asset; bids are offers selling the buying asset. Each side is grouped by the float64 value of the price N/D, ascending, first `limit` levels. A level prints the reduced rational `price_r` (bids inverted), `price` with 7 decimals (round half away from zero) and `amount` as the sum of offer amounts (asks in base units, bids in counter units). Pools are not included, as in Horizon.
+
+## /trade_aggregations
+
+`base_asset_*`, `counter_asset_*`, `resolution` (60000, 300000, 900000, 3600000, 86400000, 604800000), `start_time`, `end_time`, `offset` (whole hours, under 24 h and at most `resolution`), `order`, `limit` (default 10, max 200). Trades with rounding slippage of 1000 bips or more are excluded, as Horizon's default filter does.
+
+Differences: only trades of replayed ledgers exist (`GET /` reports `trades_cover_ledgers`); `_links` has `self` only; `avg` emulates Postgres numeric division with 30 digits then float64, so ties at the 8th decimal could differ.
+
+## /paths
+
+<GateNotice tone="warning" title="Path finding does not match Horizon yet.">
+  The engine is a port of go-stellar-sdk `exp/orderbook`, but results differ from horizon.stellar.org in most recorded cases, mainly through thin classic pools. Do not rely on this output. Ticket SDX-012.
+</GateNotice>
+
+`strict-send`: `source_asset_*`, `source_amount`, `destination_assets` (up to 15). `strict-receive`: `destination_asset_*`, `destination_amount`, `source_assets` (up to 15). Extension: `max_path_length` (1 up to the server maximum). At most 5 records per asset.
+
+Known differences, by design:
+
+1. `source_account` and `destination_account` are rejected with 400: the service holds no account or trustline state (SDX-020).
+2. Edge iteration order is ascending interned asset id (Horizon: edge insertion order). Only ties between equal amounts can differ.
+3. The result sort is stable (Go's `sort.Sort` is not).
+4. Equal-priced offers keep insertion order; after a state reload it becomes offer-id order (SDX-019).
+5. No rate limiting and no stale-ledger check.
+6. Offer-total arithmetic wraps on i64 overflow exactly like Go.
+
+## Errors
+
+Horizon's problem shape `{type, title, status, detail, extras: {code}}` with codes `E_BAD_REQUEST` (400), `E_NOT_FOUND` (404) and `E_FETCH`, `E_DECODE`, `E_SEQUENCE`, `E_CONSISTENCY`, `E_IO`, `E_ARITHMETIC` (500).

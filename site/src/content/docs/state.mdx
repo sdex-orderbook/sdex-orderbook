@@ -1,0 +1,25 @@
+---
+title: State directory
+description: The files sdx bootstrap and sdx replay write.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+
+| File | Content |
+|---|---|
+| `state.json` | `{format: "sdx-state/1", network, ledger, close_time, offers, pools, sha256, bootstrap_checkpoint, source}` |
+| `state.xdr.zst` | zstd of framed `LedgerEntry` XDR: offers by offer id ascending, then pools by pool id |
+| `trades.jsonl` | one trade per line |
+| `replay.jsonl` | one line per replayed ledger: `{ledger, close_time, trades, trade_errors[], stats, offers, pools, apply_ms}` |
+| `bootstrap-report.json` | per-bucket timings and counts, total seconds, peak memory |
+
+`sha256` covers the uncompressed framed bytes; loading refuses a mismatch (`E_CONSISTENCY`). Trades with a ledger above `state.ledger` are ignored on load and duplicates are dropped, so an interrupted replay never double counts.
+
+## Trades
+
+`{ledger, close_time, op_id, order, op_type, sold, bought, amount_sold, amount_bought, price_n, price_d, offer_id?, seller?, pool_id?, rounding_slippage?}`
+
+Trades come from successful transactions only, from the ClaimAtoms of path payments, manage buy and sell offers and passive sell offers. `op_id` is the TOID. An order-book trade's price is the maker offer's price from its last STATE pre-image; a pool trade's price is amount bought over amount sold. A trade whose pre-image is missing is dropped and reported.
+
+## Replay order
+
+Fee processing of all transactions; per transaction the changes before, the operation changes and the changes after; post-apply fee processing; upgrade changes. Created, updated and restored entries are upserted, removed entries deleted, and every offer and pool STATE pre-image is compared with the held entry, including `last_modified_ledger_seq`.

@@ -1,0 +1,67 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+// GateNotice for Starlight/MDX pages: full-width callout for wording a gate
+// requires. Not dismissable. `gzk` and `gzk-sigma` presets carry the exact
+// wording from docs/GATES.md; otherwise pass title + slot content.
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+  preset?: 'gzk' | 'gzk-sigma';
+  tone?: 'good' | 'warning' | 'serious' | 'critical' | 'neutral';
+  title?: string;
+  reference?: string;
+}
+
+const PRESETS = {
+  gzk: {
+    title: 'Amounts are encrypted from the public; not zero-knowledge.',
+    body: 'The on-chain verifier for OpenZeppelin stellar-confidential accepts proofs that are not zero-knowledge. Until a zero-knowledge verifier is merged upstream, released, adopted and audited, do not describe balances as private.',
+    reference: 'Gate G-ZK, docs/GATES.md. OZ verifier status: CR-03',
+  },
+  'gzk-sigma': {
+    title: 'Amounts hidden from the public; issuer-visible.',
+    body: 'Stage 1 proofs are checked against the issuer’s co-signature. The issuer can see every amount. This is not a zero-knowledge or private system.',
+    reference: 'Gate G-ZK (sigma proofs), docs/GATES.md',
+  },
+} as const;
+
+const { preset, tone = 'warning' } = Astro.props;
+const p = preset ? PRESETS[preset] : undefined;
+const title = Astro.props.title ?? p?.title ?? '';
+const reference = Astro.props.reference ?? p?.reference;
+---
+
+<aside role="note" class:list={['sik-notice', 'not-content', `sik-notice-${tone}`]}>
+  <span class="sik-notice-icon"><Icon name="padlock" size="1.05em" /></span>
+  <div>
+    <p class="sik-notice-title">{title}</p>
+    <div class="sik-notice-body">
+      {p ? <p>{p.body}</p> : <slot />}
+      {reference && <p class="sik-notice-ref">{reference}</p>}
+    </div>
+  </div>
+</aside>
+
+<style>
+  .sik-notice {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    margin-block: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid;
+    border-radius: var(--sik-radius-md);
+    font-size: var(--sik-text-sm);
+    line-height: var(--sik-text-sm--lh);
+  }
+  .sik-notice-warning { background: var(--sik-warning-wash); border-color: var(--sik-warning-ring); --sik-n-icon: var(--sik-warning-ink); }
+  .sik-notice-serious { background: var(--sik-serious-wash); border-color: var(--sik-serious-ring); --sik-n-icon: var(--sik-serious-ink); }
+  .sik-notice-critical { background: var(--sik-critical-wash); border-color: var(--sik-critical-ring); --sik-n-icon: var(--sik-critical-ink); }
+  .sik-notice-good { background: var(--sik-good-wash); border-color: var(--sik-good-ring); --sik-n-icon: var(--sik-good-ink); }
+  .sik-notice-neutral { background: var(--sik-sunken); border-color: var(--sik-line); --sik-n-icon: var(--sik-ink-3); }
+  .sik-notice-icon { display: inline-flex; margin-top: 2px; color: var(--sik-n-icon); }
+  .sik-notice-title { margin: 0; color: var(--sik-ink); font-weight: 500; }
+  .sik-notice-body { color: var(--sik-ink-2); }
+  .sik-notice-body :global(p) { margin: 0.25rem 0 0; }
+  .sik-notice-ref { font-family: var(--sik-font-mono); font-size: var(--sik-text-xs); color: var(--sik-ink-3); }
+</style>

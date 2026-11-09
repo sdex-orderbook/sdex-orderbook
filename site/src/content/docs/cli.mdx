@@ -1,0 +1,63 @@
+---
+title: CLI reference
+description: Every sdx command and option.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+
+Assets are written `native` or `CODE:ISSUER`. Exit codes: `0` ok, `2` bad request, `1` anything else. JSON goes to stdout, progress to stderr.
+
+| Command | What it does |
+|---|---|
+| `sdx bootstrap` | Build the offer and pool state at a checkpoint from history-archive buckets |
+| `sdx replay` | Apply ledgers from the Galexie lake to a state directory |
+| `sdx order-book` | Print `/order_book` JSON |
+| `sdx strict-send` | Print `/paths/strict-send` JSON |
+| `sdx strict-receive` | Print `/paths/strict-receive` JSON |
+| `sdx trade-aggregations` | Print `/trade_aggregations` JSON over the replayed trades |
+| `sdx serve` | Serve the Horizon-compatible endpoints on a local address |
+| `sdx diff` | Differential check against a live Horizon at matching ledgers |
+| `sdx status` | Print the state manifest and counts |
+
+## bootstrap
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--out` | `data/state` | State directory to write |
+| `--archive` | `https://history.stellar.org/prd/core-live/core_live_001` | History archive root (`file://` mirrors work) |
+| `--checkpoint` | latest | Checkpoint ledger, `(n + 1) % 64 == 0` |
+| `--cache` | `data/bucket-cache` | Content-addressed cache of per-bucket offer and pool extracts |
+| `--workers` | `3` | Concurrent bucket downloads |
+
+## replay
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--state` | `data/state` | State directory |
+| `--to` | required | Target ledger, or `head` (newest ledger in the lake listing) |
+| `--lake` | `https://aws-public-blockchain.s3.amazonaws.com` | Galexie lake root |
+| `--lake-cache` | none | Keep raw lake objects here |
+| `--workers` | `4` | Concurrent lake downloads |
+| `--strict` | off | Fail on the first pre-image mismatch instead of counting it |
+| `--save-every` | `256` | Save the state every N ledgers (`0` = only at the end) |
+
+## Query commands and serve
+
+Shared options: `--state` (default `data/state`), `--max-path-length` (default 3, maximum 5, as Horizon), `--no-pools` (leave classic pools out of path finding).
+
+| Command | Options |
+|---|---|
+| `order-book` | `--selling`, `--buying`, `--limit` (default 20) |
+| `strict-send` | `--source`, `--amount`, `--destinations` (comma-separated) |
+| `strict-receive` | `--destination`, `--amount`, `--sources` (comma-separated) |
+| `trade-aggregations` | `--base`, `--counter`, `--resolution` (default 60000), `--start-time`, `--end-time`, `--offset` (default 0), `--order` (default `asc`), `--limit` (default 10) |
+| `serve` | `--addr` (default `127.0.0.1:8000`), `--follow`, `--lake` |
+
+## diff
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--out` | required | Output directory for cases and `summary.json` |
+| `--horizon` | `https://horizon.stellar.org` | Reference Horizon (at least 600 ms between requests) |
+| `--cases` | none | JSON array of cases; without it, `--auto` pairs are sampled from the state |
+| `--auto` | `8` | Number of pairs to sample |
+| `--lake`, `--workers` | as replay | Used to replay to each case's ledger |

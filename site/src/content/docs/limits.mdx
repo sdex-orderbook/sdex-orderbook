@@ -1,0 +1,35 @@
+---
+title: Status and limits
+description: What works, what does not, and the tickets that track it.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+import GateBadge from '../../components/kit/GateBadge.astro';
+import f from '../../data/facts.json';
+
+<GateBadge kind="mainnet-read-only" /> <GateBadge kind="unaudited" />
+
+| Piece | State | Ticket |
+|---|---|---|
+| Bootstrap from history-archive buckets | works; HAS checked against the ledger header | |
+| Replay from the Galexie lake | works; {f.replay.mismatch} pre-image mismatches in {f.replay.ledgers.toLocaleString('en-US')} ledgers | |
+| `/order_book` | identical to Horizon in {f.orderBooks.equal} of {f.orderBooks.cases} recorded cases | |
+| `/trade_aggregations` | identical in {f.aggregations.equal} of {f.aggregations.cases} recorded windows | |
+| `/paths` | **does not match**: {f.pathsWithPools.equal} of {f.pathsWithPools.cases} with pools | SDX-012 |
+| Per-bucket hash verification (full read) | not run; integrity rests on the HAS check and the replay pre-image checks | SDX-013 |
+| `source_account` / `destination_account` | rejected with 400 | SDX-020 |
+| Trades before the bootstrap checkpoint | not available | SDX-016 |
+| SSE streaming | not built | SDX-021 |
+| Protocol 30 XDR | blocked until mainnet upgrades | SDX-018 |
+| Release build, soak test of `--follow` | not measured | |
+
+## Path finding: what is known
+
+- With pools, our results route through thin classic pools and report far larger amounts than Horizon's records at the same ledger.
+- On 2026-11-04 Horizon listed the 18/USDC pool (reserves 0.0022002 / 75.4313983) but returned no path for 0.0001 "18" to USDC ([P] a manual read at about 18:20 UTC, recorded in SOURCES.md. It is not stored as a fixture and cannot be re-verified now, because Horizon has since moved on: treat it as [U] for re-verification. That pool is the only evidence for the leading explanation of the path mismatch, which is why path finding is marked open.)
+- A probe on 2026-11-08 found Horizon routing through that pool after it changed (ledger 65,364,568). Our pool maths reproduces Horizon's direct amount for the new reserves exactly (`fixtures/probes/20261108-pool-18-usdc`). So Horizon does not filter small pools as a rule.
+- Horizon's own code loads every non-deleted pool into its path graph. One untested explanation is a stale or missing graph entry on Horizon's side until a pool's row changes.
+- The cause of the 2026-11-04 differences is not found. A fresh diff needs a state at the network head, which means a new bootstrap or a long replay.
+
+## Gates
+
+No mainnet writes (G-VALUE): the code has no signing or submission path. No outreach: drafts for other projects are written for the user to send, never posted.

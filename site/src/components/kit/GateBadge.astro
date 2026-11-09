@@ -1,0 +1,85 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+// GateBadge for Starlight/MDX pages. Same kinds, labels and wording as
+// design/components/GateBadge.tsx. Icons come from Starlight's built-in set.
+import { Icon } from '@astrojs/starlight/components';
+
+type Tone = 'good' | 'warning' | 'serious' | 'critical' | 'neutral';
+type Kind = 'demo-only' | 'testnet-only' | 'mainnet-read-only' | 'unaudited' | 'g-zk' | 'not-yet-available' | 'gate';
+type IconName = 'warning' | 'information' | 'open-book' | 'question-circle' | 'padlock' | 'clock' | 'approve-check';
+
+interface Props {
+  kind: Kind;
+  /** For kind="gate": the gate id from docs/GATES.md, e.g. "G-VALUE". */
+  gateId?: string;
+  state?: 'open' | 'closed';
+  label?: string;
+  description?: string;
+  href?: string;
+}
+
+const SPEC: Record<Exclude<Kind, 'gate'>, { label: string; tone: Tone; icon: IconName; description: string }> = {
+  'demo-only': { label: 'Demo-only', tone: 'serious', icon: 'warning', description: 'Prototype code. Unaudited. Do not hold value with it.' },
+  'testnet-only': {
+    label: 'Testnet only',
+    tone: 'warning',
+    icon: 'information',
+    description: 'Writes go to Stellar testnet only, signed with throwaway keys generated at runtime and never stored.',
+  },
+  'mainnet-read-only': {
+    label: 'Mainnet read-only',
+    tone: 'neutral',
+    icon: 'open-book',
+    description: 'Reads public Stellar mainnet data. Never signs or submits a transaction (gate G-VALUE).',
+  },
+  unaudited: { label: 'Unaudited', tone: 'warning', icon: 'question-circle', description: 'No external audit has been done. Findings are evidence for reviewers, not an audit.' },
+  'g-zk': { label: 'G-ZK: not zero-knowledge', tone: 'warning', icon: 'padlock', description: 'Amounts are encrypted from the public; not zero-knowledge. Gate G-ZK is closed.' },
+  'not-yet-available': { label: 'Not yet available', tone: 'neutral', icon: 'clock', description: 'This feature is not built yet. Nothing here is simulated.' },
+};
+
+const { kind, gateId, state, label, description, href } = Astro.props;
+const open = state === 'open';
+const s =
+  kind === 'gate'
+    ? {
+        label: label ?? `${gateId ?? 'Gate'} ${open ? 'open' : 'closed'}`,
+        tone: (open ? 'good' : 'neutral') as Tone,
+        icon: (open ? 'approve-check' : 'padlock') as IconName,
+        description: description ?? `${gateId ?? 'This gate'} is ${open ? 'open' : 'closed'}. See docs/GATES.md.`,
+      }
+    : { ...SPEC[kind], label: label ?? SPEC[kind].label, description: description ?? SPEC[kind].description };
+const Tag = href ? 'a' : 'span';
+---
+
+<Tag class:list={['sik-badge', 'not-content', `sik-tone-${s.tone}`]} href={href} title={s.description}>
+  <Icon name={s.icon} size="0.95em" />
+  <span>{s.label}</span>
+  <span class="sr-only">: {s.description}</span>
+</Tag>
+
+<style>
+  .sik-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    border: 1px solid;
+    border-radius: var(--sik-radius-xs);
+    font-family: var(--sik-font-mono);
+    font-size: var(--sik-text-2xs);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: var(--sik-tracking-label);
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  .sik-tone-good { background: var(--sik-good-wash); color: var(--sik-good-ink); border-color: var(--sik-good-ring); }
+  .sik-tone-warning { background: var(--sik-warning-wash); color: var(--sik-warning-ink); border-color: var(--sik-warning-ring); }
+  .sik-tone-serious { background: var(--sik-serious-wash); color: var(--sik-serious-ink); border-color: var(--sik-serious-ring); }
+  .sik-tone-critical { background: var(--sik-critical-wash); color: var(--sik-critical-ink); border-color: var(--sik-critical-ring); }
+  .sik-tone-neutral { background: var(--sik-neutral-wash); color: var(--sik-neutral-ink); border-color: var(--sik-neutral-ring); }
+  a.sik-badge:hover { filter: brightness(0.97); }
+</style>

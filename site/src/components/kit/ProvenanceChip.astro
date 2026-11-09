@@ -1,0 +1,95 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+// ProvenanceChip for Starlight/MDX pages. Same kinds and text as
+// design/components/ProvenanceChip.tsx. Put one beside every number a docs
+// page quotes. Segments wrap as whole units; a ledger number is never cut.
+import { Icon } from '@astrojs/starlight/components';
+
+type Kind = 'live' | 'recorded' | 'fixture' | 'testnet' | 'estimate' | 'unknown';
+
+interface Props {
+  kind: Kind;
+  ledger?: number;
+  /** YYYY-MM-DD or ISO timestamp (UTC). */
+  date?: string;
+  source?: string;
+  href?: string;
+  note?: string;
+}
+
+const KIND = {
+  live: { label: 'Live read', icon: null },
+  recorded: { label: 'Recorded mainnet capture', icon: 'database' },
+  fixture: { label: 'Fixture', icon: 'document' },
+  testnet: { label: 'Testnet run', icon: 'server' },
+  estimate: { label: 'Estimate [E]', icon: 'analytics' },
+  unknown: { label: 'Provenance unknown', icon: 'question-circle' },
+} as const;
+
+const { kind, ledger, date, source, href, note } = Astro.props;
+const k = KIND[kind];
+const shownDate = date && date.length > 10 ? `${new Date(date).toISOString().slice(0, 10)} ${new Date(date).toISOString().slice(11, 16)} UTC` : date;
+const parts = [k.label, ledger !== undefined ? `ledger ${ledger.toLocaleString('en-US')}` : undefined, shownDate, ledger === undefined ? source : undefined].filter(
+  (p): p is string => Boolean(p),
+);
+const full = [...parts, ledger !== undefined ? source : undefined, note].filter(Boolean).join(', ');
+const estimated = kind === 'estimate' || kind === 'unknown';
+const Tag = href ? 'a' : 'span';
+---
+
+<Tag class:list={['sik-chip', 'not-content', { 'sik-chip-est': estimated }]} href={href} title={full} aria-label={`Provenance: ${full}`}>
+  {
+    k.icon ? (
+      <span class:list={['sik-chip-icon', { 'sik-chip-unknown': kind === 'unknown' }]}>
+        <Icon name={k.icon} size="1em" />
+      </span>
+    ) : (
+      <span class="sik-live" aria-hidden="true" />
+    )
+  }
+  <span class="sik-chip-parts">
+    {
+      parts.map((p, i) => (
+        <span class:list={{ 'sik-chip-atomic': i > 0 }}>
+          <span class:list={{ 'sik-chip-kind': i === 0 }}>{p}</span>
+          {i < parts.length - 1 && <span aria-hidden="true" class="sik-chip-sep">·</span>}
+        </span>
+      ))
+    }
+  </span>
+</Tag>
+
+<style>
+  .sik-chip {
+    display: inline-flex;
+    max-width: 100%;
+    align-items: flex-start;
+    gap: 0.375rem;
+    padding: 3px 0.5rem;
+    border: 1px solid var(--sik-line);
+    border-radius: var(--sik-radius-xs);
+    background: var(--sik-surface);
+    color: var(--sik-ink-2);
+    font-size: var(--sik-text-xs);
+    line-height: var(--sik-text-xs--lh);
+    font-variant-numeric: tabular-nums slashed-zero;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  .sik-chip-est { border-style: dashed; border-color: var(--sik-line-strong); }
+  a.sik-chip:hover { background: var(--sik-sunken); border-color: var(--sik-line-strong); }
+  .sik-chip-icon { display: inline-flex; margin-top: 2px; color: var(--sik-ink-3); }
+  .sik-chip-unknown { color: var(--sik-serious-ink); }
+  .sik-live {
+    flex: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 5px;
+    border-radius: 999px;
+    background: var(--sik-good);
+  }
+  .sik-chip-parts { display: flex; flex-wrap: wrap; column-gap: 0.375rem; min-width: 0; }
+  .sik-chip-atomic { white-space: nowrap; }
+  .sik-chip-sep { margin-left: 0.375rem; color: var(--sik-ink-3); }
+  .sik-chip-kind { color: var(--sik-ink); font-weight: 500; }
+</style>

@@ -1,0 +1,40 @@
+---
+title: Differential check
+description: How sdx was compared with horizon.stellar.org, and the recorded results.
+---
+{/* SPDX-License-Identifier: Apache-2.0 */}
+import ProvenanceChip from '../../components/kit/ProvenanceChip.astro';
+import f from '../../data/facts.json';
+
+`sdx diff` makes the comparison ledger-exact even though the replayer is slower than a live Horizon:
+
+1. Every case is queried from Horizon and its `Latest-Ledger` H is recorded. Cases whose H is not ahead of our state are skipped.
+2. Our state is replayed ledger by ledger, and each case is answered at exactly H (and at H - 1, reported separately if only that matches).
+3. Trade aggregations use the complete minutes between the first replayed trade and our last close time minus two minutes.
+
+Each case is stored with the request, both bodies, the ledger and the comparison. Order book cases also store the XDR of the offers on both sides, so they can be re-checked offline.
+
+## Recorded runs
+
+<table>
+  <thead><tr><th>Run</th><th>Our side</th><th>Order books</th><th>Aggregations</th><th>Strict-send</th><th>Strict-receive</th><th>Horizon requests</th></tr></thead>
+  <tbody>
+    {f.runs.map((r) => (
+      <tr>
+        <td><code>{r.id}</code></td>
+        <td>{r.includePools ? 'pools on' : 'pools off'}</td>
+        <td>{r.kinds.order_book.equal} of {r.kinds.order_book.cases}</td>
+        <td>{r.kinds.trade_aggregations.equal} of {r.kinds.trade_aggregations.cases}</td>
+        <td>{r.kinds.strict_send.equal} of {r.kinds.strict_send.cases}</td>
+        <td>{r.kinds.strict_receive.equal} of {r.kinds.strict_receive.cases}</td>
+        <td>{r.horizonRequests}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+<ProvenanceChip kind="recorded" date={f.runs[0].date} source="fixtures/diff" note="Horizon bodies stored verbatim" />
+
+Horizon always uses pools. The second run switched pools off on our side only, so its path matches are partial evidence, not parity.
+
+The web demo shows every case side by side, with hashes of both bodies.

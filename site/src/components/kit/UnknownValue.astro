@@ -1,0 +1,34 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+// UnknownValue for Starlight/MDX pages: stands in for a number the page does
+// not have. Never renders "0" or "-". The reason is required.
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+  kind?: 'unknown' | 'unavailable' | 'error' | 'encrypted';
+  reason: string;
+  label?: string;
+}
+
+const MAP = {
+  unknown: { text: 'Unknown', icon: 'question-circle' },
+  unavailable: { text: 'Not yet available', icon: 'clock' },
+  error: { text: 'Read failed', icon: 'error' },
+  encrypted: { text: 'Encrypted', icon: 'padlock' },
+} as const;
+
+const { kind = 'unknown', reason, label } = Astro.props;
+const u = MAP[kind];
+---
+
+<span class:list={['sik-unknown', { 'sik-unknown-error': kind === 'error' }]} title={reason}>
+  <Icon name={u.icon} size="0.9em" />
+  <span class="sik-unknown-text">{label ?? u.text}</span>
+  <span class="sr-only">. {reason}</span>
+</span>
+
+<style>
+  .sik-unknown { display: inline-flex; align-items: center; gap: 0.25rem; color: var(--sik-ink-3); }
+  .sik-unknown-error { color: var(--sik-critical-ink); }
+  .sik-unknown-text { text-decoration: underline dotted 1px; text-underline-offset: 3px; }
+</style>
