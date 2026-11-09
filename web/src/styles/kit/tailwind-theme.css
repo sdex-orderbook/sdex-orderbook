@@ -1,0 +1,206 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/*
+ * Tailwind v4 mapping of the kit tokens. Usage in a project's main stylesheet:
+ *
+ *   @import "tailwindcss";
+ *   @import "./design/tailwind-theme.css";   // copied from <kit>/design/
+ *   @import "@fontsource-variable/geist";
+ *   @import "@fontsource-variable/geist-mono";
+ *
+ * Every colour utility resolves to a CSS variable (`@theme inline`), so light
+ * and dark switch through tokens.css, never through `dark:` utilities. The
+ * Tailwind default palette, type scale, radii and shadows are cleared on
+ * purpose: if `bg-slate-900` or `text-4xl` does not compile, that is the
+ * system working. Use the semantic names below.
+ */
+@import './tokens.css';
+
+/* `dark:` exists for rare escapes only. It follows the resolved data-theme
+   attribute that AppShell's theme script always sets on <html>. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@theme {
+  --color-*: initial;
+  --text-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --inset-shadow-*: initial;
+  --drop-shadow-*: initial;
+}
+
+@theme inline {
+  /* Neutrals */
+  --color-canvas: var(--sik-canvas);
+  --color-surface: var(--sik-surface);
+  --color-sunken: var(--sik-sunken);
+  --color-raised: var(--sik-raised);
+  --color-line: var(--sik-line);
+  --color-line-strong: var(--sik-line-strong);
+  --color-ink: var(--sik-ink);
+  --color-ink-2: var(--sik-ink-2);
+  --color-ink-3: var(--sik-ink-3);
+  --color-ink-inverse: var(--sik-ink-inverse);
+
+  /* Project accent (chrome only: links, active nav, focus, monogram, hero rule) */
+  --color-accent: var(--sik-accent);
+  --color-accent-wash: var(--sik-accent-wash);
+  --color-focus: var(--sik-focus);
+
+  /* Status (state only, always with icon + label) */
+  --color-good: var(--sik-good);
+  --color-good-ink: var(--sik-good-ink);
+  --color-good-wash: var(--sik-good-wash);
+  --color-good-ring: var(--sik-good-ring);
+  --color-warning: var(--sik-warning);
+  --color-warning-ink: var(--sik-warning-ink);
+  --color-warning-wash: var(--sik-warning-wash);
+  --color-warning-ring: var(--sik-warning-ring);
+  --color-serious: var(--sik-serious);
+  --color-serious-ink: var(--sik-serious-ink);
+  --color-serious-wash: var(--sik-serious-wash);
+  --color-serious-ring: var(--sik-serious-ring);
+  --color-critical: var(--sik-critical);
+  --color-critical-ink: var(--sik-critical-ink);
+  --color-critical-wash: var(--sik-critical-wash);
+  --color-critical-ring: var(--sik-critical-ring);
+  --color-neutral-ink: var(--sik-neutral-ink);
+  --color-neutral-wash: var(--sik-neutral-wash);
+  --color-neutral-ring: var(--sik-neutral-ring);
+
+  /* Data (identity, fixed order) */
+  --color-viz-1: var(--sik-viz-1);
+  --color-viz-2: var(--sik-viz-2);
+  --color-viz-3: var(--sik-viz-3);
+  --color-viz-4: var(--sik-viz-4);
+  --color-viz-5: var(--sik-viz-5);
+  --color-viz-6: var(--sik-viz-6);
+  --color-viz-7: var(--sik-viz-7);
+  --color-viz-8: var(--sik-viz-8);
+  --color-viz-other: var(--sik-viz-other);
+  --color-viz-grid: var(--sik-viz-grid);
+  --color-viz-axis: var(--sik-viz-axis);
+  --color-viz-label: var(--sik-viz-label);
+  --color-viz-diverge-mid: var(--sik-viz-diverge-mid);
+  --color-seq-100: var(--sik-seq-100);
+  --color-seq-200: var(--sik-seq-200);
+  --color-seq-300: var(--sik-seq-300);
+  --color-seq-400: var(--sik-seq-400);
+  --color-seq-500: var(--sik-seq-500);
+  --color-seq-600: var(--sik-seq-600);
+  --color-seq-700: var(--sik-seq-700);
+
+  /* Type */
+  --font-sans: var(--sik-font-sans);
+  --font-mono: var(--sik-font-mono);
+  --text-2xs: var(--sik-text-2xs);
+  --text-2xs--line-height: var(--sik-text-2xs--lh);
+  --text-xs: var(--sik-text-xs);
+  --text-xs--line-height: var(--sik-text-xs--lh);
+  --text-sm: var(--sik-text-sm);
+  --text-sm--line-height: var(--sik-text-sm--lh);
+  --text-base: var(--sik-text-base);
+  --text-base--line-height: var(--sik-text-base--lh);
+  --text-md: var(--sik-text-md);
+  --text-md--line-height: var(--sik-text-md--lh);
+  --text-lg: var(--sik-text-lg);
+  --text-lg--line-height: var(--sik-text-lg--lh);
+  --text-xl: var(--sik-text-xl);
+  --text-xl--line-height: var(--sik-text-xl--lh);
+  --text-2xl: var(--sik-text-2xl);
+  --text-2xl--line-height: var(--sik-text-2xl--lh);
+  --text-3xl: var(--sik-text-3xl);
+  --text-3xl--line-height: var(--sik-text-3xl--lh);
+  --text-figure: var(--sik-text-figure);
+  --text-figure--line-height: var(--sik-text-figure--lh);
+  --text-hero: var(--sik-text-hero);
+  --text-hero--line-height: var(--sik-text-hero--lh);
+  --tracking-tight: var(--sik-tracking-tight);
+  --tracking-hero: var(--sik-tracking-hero);
+  --tracking-label: var(--sik-tracking-label);
+
+  /* Shape, depth, motion */
+  --radius-xs: var(--sik-radius-xs);
+  --radius-sm: var(--sik-radius-sm);
+  --radius-md: var(--sik-radius-md);
+  --radius-lg: var(--sik-radius-lg);
+  --radius-bar: var(--sik-radius-bar);
+  --shadow-1: var(--sik-shadow-1);
+  --shadow-2: var(--sik-shadow-2);
+  --shadow-3: var(--sik-shadow-3);
+  --inset-shadow-highlight: var(--sik-highlight);
+  --ease-settle: var(--sik-ease-settle);
+  --ease-swift: var(--sik-ease-swift);
+
+  /* Layout widths: max-w-content, max-w-report, max-w-prose */
+  --container-content: var(--sik-content-max);
+  --container-report: var(--sik-report-max);
+  --container-prose: var(--sik-prose-max);
+}
+
+@layer base {
+  html {
+    background-color: var(--sik-canvas);
+    color: var(--sik-ink);
+    font-family: var(--sik-font-sans);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    min-height: 100dvh;
+    font-size: var(--sik-text-base);
+    line-height: var(--sik-text-base--lh);
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: var(--sik-tracking-tight);
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  code, kbd, samp, pre { font-family: var(--sik-font-mono); }
+  ::selection { background: var(--sik-accent-wash); color: var(--sik-ink); }
+  :focus-visible {
+    outline: 2px solid var(--sik-focus);
+    outline-offset: 2px;
+    border-radius: var(--sik-radius-xs);
+  }
+  a { text-underline-offset: 3px; }
+}
+
+/* Numbers in columns align; standalone figures stay proportional. */
+@utility tabular {
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+/* The one mono-caps label style (badges, chips, column meta). Rationed. */
+@utility label-mono {
+  font-family: var(--sik-font-mono);
+  font-size: var(--sik-text-2xs);
+  line-height: var(--sik-text-2xs--lh);
+  letter-spacing: var(--sik-tracking-label);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/* Hero rule: the 2px accent line on top of the app header and report masthead. */
+@utility accent-rule {
+  box-shadow: inset 0 2px 0 0 var(--sik-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Live indicator pulse: the only perpetual animation in the system, and only
+   on data that is actually live. */
+@keyframes sik-live-pulse {
+  0% { transform: scale(1); opacity: 0.55; }
+  70% { transform: scale(2.4); opacity: 0; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@utility animate-live {
+  animation: sik-live-pulse 2.4s var(--sik-ease-settle) infinite;
+}
