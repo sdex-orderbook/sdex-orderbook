@@ -55,7 +55,7 @@ Stellar has a native order book and classic AMMs at the protocol level. The data
 
 ## What launch needs
 
-- **Hosting:** a static host for the demo and docs, and one server or container for `sdx serve --follow`. It needs a few GB of disk for bucket and lake caches and about 2 GB of RAM ([M] peak 1.83 GB).
+- **Hosting:** a static host for the demo and docs, and one server or container for `sdx serve --follow`. It needs a few GB of disk for bucket and lake caches and about 2 GB of RAM ([M] peak 1.83 GB). Static demo and docs are on GitHub Pages already (SDX-031); the server is not hosted yet (SDX-032).
 - **Packages:** crates.io publish of `sik-sdex-orderbook-core` and `sik-sdex-orderbook-cli`, and release binaries. See DEPLOY.md.
 - **Audit:** an external review of the replay and trade-derivation logic and of the Horizon-compatibility claims. Path parity must be fixed first.
 - **Licence housekeeping:** go-stellar-sdk ports are attributed in NOTICE (Apache-2.0). The root NOTICE entry is pending (cross-project request).

@@ -39,6 +39,7 @@ rm -rf demo-dist && mkdir demo-dist && cp -r web/dist/. demo-dist/ && cp -r site
 python3 -m http.server 4173 --directory demo-dist
 # web app:  http://localhost:4173/
 # docs:     http://localhost:4173/docs/
+# hosted copy (recorded fixtures only): https://sdex-orderbook.github.io/sdex-orderbook/ (docs under /docs/)
 ```
 
 For development: `cd web && pnpm dev` and `cd site && pnpm dev` (port 4321).

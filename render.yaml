@@ -11,4 +11,4 @@ services:
     disk:
       name: sdx-state
       mountPath: /var/lib/sdx
-      sizeGB: 40
+      sizeGB: 10  # state ~115 MB + bucket extracts ~230 MB ([M], DEPLOY.md 4); buckets are streamed
