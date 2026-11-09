@@ -1,0 +1,8 @@
+target/
+data/
+demo-dist/
+web/node_modules/
+web/dist/
+site/node_modules/
+site/dist/
+site/.astro/

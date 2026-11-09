@@ -1,0 +1,28 @@
+sdex-orderbook (Stellar Institutional Kit)
+Copyright 2026 the Stellar Institutional Kit contributors
+
+Licensed under the Apache License, Version 2.0.
+
+This project contains Rust ports of code from go-stellar-sdk
+(https://github.com/stellar/go-stellar-sdk, commit f8efc493fca9, the version
+pinned by stellar-horizon main on 2026-11-03), Copyright Stellar Development
+Foundation and contributors, licensed under the Apache License, Version 2.0:
+
+  - exp/orderbook/search.go, graph.go, edges.go, utils.go
+      -> crates/core/src/paths.rs (search, processVenues, consumeOffers*,
+         sortAndFilterPaths, positiveMin)
+  - exp/orderbook/pools.go
+      -> crates/core/src/pool_math.rs (CalculatePoolPayout,
+         CalculatePoolExpectation, rounding slippage)
+  - price/main.go
+      -> crates/core/src/price.rs (MulFractionRoundDown, mulFractionRoundUp,
+         ConvertToBuyingUnits)
+
+Behaviour (not code) is also mirrored from stellar-horizon
+(https://github.com/stellar/stellar-horizon, Apache-2.0):
+internal/db2/history/orderbook.go, internal/db2/history/trade_aggregation.go,
+internal/ingest/processors/trades_processor.go, internal/actions/path.go.
+
+The ports were translated by hand from Go to Rust; changes are described in
+SPEC.md section 5. The upstream Apache-2.0 licence text applies to those
+portions: https://www.apache.org/licenses/LICENSE-2.0
