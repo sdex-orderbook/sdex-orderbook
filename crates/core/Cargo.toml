@@ -1,0 +1,24 @@
+[package]
+name = "sik-sdex-orderbook-core"
+description = "Horizon-free SDEX order book, path finding and trade aggregation rebuilt from ledger data."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "sdx_core"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+stellar-xdr = { workspace = true }
+stellar-strkey = { workspace = true }
+zstd = { workspace = true }
+flate2 = { workspace = true }
+ureq = { workspace = true }
+ethnum = { workspace = true }
