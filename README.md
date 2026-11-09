@@ -9,7 +9,7 @@ No claim is made that this is the first such service; see `PRIOR-ART.md` (re-che
 - `web/`: investor demo (Vite + React + TypeScript + Tailwind v4, kit design system). Order books and trade aggregations side by side with Horizon from the recorded diffs, the path-finding status, the bootstrap and replay evidence, and an optional live mode against a local `sdx serve`. Data: `pnpm demo:data` from `fixtures/` only.
 - `site/`: docs site (Astro + Starlight, kit theme): quickstart, CLI, HTTP API, state format, differential check, status and limits.
 - `scripts/build-demo.sh` builds both into `demo-dist/`. See [DEMO.md](DEMO.md) (commands and a 3-5 minute script), [PITCH.md](PITCH.md), [DEPLOY.md](DEPLOY.md), [MVP-PLAN.md](MVP-PLAN.md).
-- Hosted (2026-11-09): static demo and docs on GitHub Pages, `https://sdex-orderbook.github.io/sdex-orderbook/` and `.../sdex-orderbook/docs/` (recorded fixtures, not live data; SDX-031). A hosted live `sdx serve` endpoint does not exist yet: Render and VPS files are in the repo, nothing is deployed (SDX-032). `/paths` still does not match Horizon (SDX-012); no parity claim is made anywhere.
+- Hosted (2026-11-09): static demo and docs on GitHub Pages, `https://sdex-orderbook.github.io/sdex-orderbook/` and `.../sdex-orderbook/docs/` (recorded fixtures, not live data; SDX-031). A hosted live `sdx serve` endpoint does not exist yet: systemd and nginx files for an Oracle Cloud Always Free Arm VM are in the repo, nothing is deployed (SDX-032). `/paths` still does not match Horizon (SDX-012); no parity claim is made anywhere.
 
 ## Status (2026-11-04, re-checked 2026-11-08)
 

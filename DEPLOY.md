@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 # sdex-orderbook: deployment checklist (later phase)
 
-Status (2026-11-09): section 1 is deployed by the user (GitHub Pages from `.github/workflows/pages.yml`, repo `sdex-orderbook/sdex-orderbook`); the project-page base fix is committed but not yet verified live (SDX-031). Sections 2-4 are not done: the Render blueprint and VPS files exist but nothing is built or hosted (SDX-032), and the release workflow has not run (SDX-033). Agents do not publish, deploy or push (session rules); the user does.
+Status (2026-11-09): section 1 is deployed by the user (GitHub Pages from `.github/workflows/pages.yml`, repo `sdex-orderbook/sdex-orderbook`); the project-page base fix is committed but not yet verified live (SDX-031). Sections 2-4 are not done: the VPS files exist (target host: Oracle Cloud Always Free ARM) but nothing is hosted (SDX-032), and the release workflow has not run (SDX-033). Agents do not publish, deploy or push (session rules); the user does.
 
 ## What must never happen
 
@@ -53,9 +53,29 @@ Before `cargo publish`:
 | Network | outbound HTTPS to `history.stellar.org` (bootstrap) and `aws-public-blockchain.s3.amazonaws.com` (lake). No inbound except the API port. |
 | Front | a reverse proxy with TLS and rate limiting. The built-in server is `std::net`, one thread per connection, GET only. It has 10 s socket timeouts, 8 KiB line and 64-header caps, at most 64 connections and 4 concurrent route computations (503 beyond that) (SDX-029), but no per-request deadline on `/paths`, no TLS and no per-client rate limit, and it answers `Access-Control-Allow-Origin: *`. It MUST NOT be exposed directly: run it bound to 127.0.0.1 behind a reverse proxy that adds TLS, per-client rate limits, a request timeout and a body/URL size limit. |
 | VPS files | `deploy/sdx.service` (systemd, binds 127.0.0.1:8000) and `deploy/nginx-sdx.conf` (rate limit 5 req/s, 15 s timeouts; replace `api.example.org`, then certbot). Not tested on a host (SDX-032) |
-| Render files | `Dockerfile`, `deploy/render-entrypoint.sh`, `deploy/placeholder.py`, `render.yaml` (Docker web service, persistent disk at `/var/lib/sdx`). First boot answers 503 JSON on `$PORT` while it runs `sdx bootstrap` (about 82 min) and `sdx replay --to head`; later boots go straight to `sdx serve --addr 0.0.0.0:$PORT --follow`. Render adds TLS but no rate limit or `/paths` deadline: put Cloudflare in front. Image tag `rust:1.97.1-bookworm` and the plan name are unverified; no image has been built (SDX-032). No `healthCheckPath` is set, because `GET /` is 503 during bootstrap |
+| Host | Oracle Cloud Always Free, Ampere A1 Arm VM (`VM.Standard.A1.Flex`, Ubuntu aarch64), no cost. Free-tier limits are from memory, check Oracle's current terms; the home region is chosen at signup and cannot be changed, and Arm capacity can be unavailable in some regions. Render's free plan was rejected: 512 MB RAM (bootstrap peaks at 1.83 GB), no persistent disk, sleeps when idle |
+| Oracle setup | see "Oracle setup" below |
 | Health | `GET /` returns ledger, close time, offers, pools and `trades_cover_ledgers`. Alert if the ledger lags the network. |
 | Not to expose | `sdx diff` against Horizon from a public box: it is a manual, rate-limited check (>= 600 ms between Horizon requests). |
+
+### Oracle setup (SDX-032; written 2026-11-09, not yet run)
+
+1. Create the Always Free account and a `VM.Standard.A1.Flex` instance (Ubuntu, 2 OCPU / 8 GB is enough; 4 / 24 is the free maximum). Add your SSH key.
+2. Network: in the VCN security list add ingress for TCP 80 and 443. The Ubuntu image also ships host firewall rules that reject them: allow both with `iptables` (and persist) before certbot.
+3. DNS: point a name (a subdomain, or a free DuckDNS name) at the instance's public IP.
+4. Build on the box (Arm, so no release binary from `release.yml`):
+   ```
+   sudo apt-get update && sudo apt-get install -y build-essential pkg-config git nginx certbot python3-certbot-nginx
+   curl https://sh.rustup.rs -sSf | sh -s -- -y && . ~/.cargo/env
+   git clone https://github.com/sdex-orderbook/sdex-orderbook.git && cd sdex-orderbook
+   cargo build --release --locked -p sik-sdex-orderbook-cli     # rust-toolchain.toml pins 1.97.1
+   sudo useradd -r -m sdx && sudo install -d -o sdx /opt/sdx /var/lib/sdx
+   sudo install target/release/sdx /opt/sdx/sdx
+   ```
+5. State, once (about 82 min bootstrap, then catch-up), in `tmux`, as the `sdx` user: `sdx bootstrap --out /var/lib/sdx/state` then `sdx replay --state /var/lib/sdx/state --to head`. Respect the limits: at most 4 concurrent downloads.
+6. Service: `sudo cp deploy/sdx.service /etc/systemd/system/ && sudo systemctl enable --now sdx`.
+7. Proxy and TLS: copy `deploy/nginx-sdx.conf` to `/etc/nginx/conf.d/sdx.conf`, set `server_name`, `sudo nginx -t && sudo systemctl reload nginx`, then `sudo certbot --nginx -d <name>`.
+8. Smoke test: `curl 'https://<name>/order_book?selling_asset_type=native&buying_asset_type=credit_alphanum4&buying_asset_code=USDC&buying_asset_issuer=GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN'` returns a book with a recent `Latest-Ledger`. Then record the URL in README and set SDX-032 to DONE.
 
 ## 5. Scheduled evidence (after hosting)
 

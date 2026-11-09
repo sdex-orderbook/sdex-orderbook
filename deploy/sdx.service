@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# /etc/systemd/system/sdx.service. Adjust User and paths. Local bind only: nginx fronts it.
+# /etc/systemd/system/sdx.service. Binary at /opt/sdx/sdx, state in /var/lib/sdx, user sdx (DEPLOY.md "Oracle setup"). Local bind only: nginx fronts it.
 [Unit]
 Description=sdx serve (read-only SDEX order book from ledger data)
 After=network-online.target
