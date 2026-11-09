@@ -1,0 +1,17 @@
+{
+  "exported_at": "2026-11-08T04:40:49Z",
+  "script": "python3 -I scripts/export-run-stats.py --state data/state --out fixtures/runs/20261104-mainnet",
+  "network": "pubnet",
+  "kind": "recorded mainnet run (read-only: history archive + Galexie public lake)",
+  "inputs": {
+    "state.json": "ec42cb933548c03822fa7013f7a9b03d2d39bf5603afdc7469cb94859d502358",
+    "bootstrap-report.json": "060d2075b3fe6453fcfecb9227917cfc2d079e043a7dfc6e4a5962f3d6c50f7f",
+    "replay.jsonl": "a3626681e381b35f0775ff3d5740b89990c40d1977405fdfcbae764cddd88013",
+    "bootstrap.out": "21a385df32923cb06c61cce5d59b38ef82e7b311cf1abe3eb94ce434185a3dde"
+  },
+  "notes": [
+    "bootstrap.seconds_this_attempt covers the second (successful) attempt only; the cold total over both attempts was ~82 min wall (README, data/bootstrap-attempt1.err).",
+    "replay rows are de-duplicated by ledger; duplicated lines had identical stats.",
+    "Runs were on a shared 4-core machine with a debug build (dev profile with optimised hot crates)."
+  ]
+}

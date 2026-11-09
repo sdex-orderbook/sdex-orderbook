@@ -1,0 +1,14 @@
+{
+  "bids": [],
+  "asks": [],
+  "base": {
+    "asset_type": "credit_alphanum4",
+    "asset_code": "THE1",
+    "asset_issuer": "GBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW"
+  },
+  "counter": {
+    "asset_type": "credit_alphanum12",
+    "asset_code": "USTRY",
+    "asset_issuer": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
+  }
+}

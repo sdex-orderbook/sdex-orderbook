@@ -1,0 +1,57 @@
+{
+  "final_ledger": 65305924,
+  "horizon": "https://horizon.stellar.org",
+  "horizon_requests": 72,
+  "kinds": {
+    "order_book": {
+      "best_equal": 0,
+      "cases": 8,
+      "compared_at_matching_ledger": 8,
+      "equal": 8,
+      "equal_ignoring_order": 0,
+      "matched_previous_ledger": 0,
+      "mismatched": 0,
+      "skipped": 0
+    },
+    "strict_receive": {
+      "best_equal": 2,
+      "cases": 24,
+      "compared_at_matching_ledger": 24,
+      "equal": 2,
+      "equal_ignoring_order": 2,
+      "matched_previous_ledger": 0,
+      "mismatched": 22,
+      "skipped": 0
+    },
+    "strict_send": {
+      "best_equal": 3,
+      "cases": 24,
+      "compared_at_matching_ledger": 24,
+      "equal": 3,
+      "equal_ignoring_order": 3,
+      "matched_previous_ledger": 0,
+      "mismatched": 21,
+      "skipped": 0
+    },
+    "trade_aggregations": {
+      "best_equal": 0,
+      "cases": 16,
+      "compared_at_matching_ledger": 16,
+      "equal": 16,
+      "equal_ignoring_order": 0,
+      "matched_previous_ledger": 0,
+      "mismatched": 0,
+      "skipped": 0
+    }
+  },
+  "replay_totals": {
+    "offers_removed": 4735,
+    "offers_upserted": 104881,
+    "pools_removed": 0,
+    "pools_upserted": 38721,
+    "state_checked": 143383,
+    "state_mismatch": 0
+  },
+  "seconds": 1057.076648383,
+  "trade_errors": 0
+}

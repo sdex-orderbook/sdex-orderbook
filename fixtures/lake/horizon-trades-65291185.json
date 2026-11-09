@@ -1,0 +1,1694 @@
+{
+ "ledger": 65291185,
+ "source": "https://horizon.stellar.org/trades?cursor=280423504292085760&order=asc&limit=200",
+ "records": [
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/53e659741983ecde31e64bda0bf5a3cceca74fbb85e5beccab3b212f859913fd"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292126721"
+    }
+   },
+   "id": "280423504292126721-0",
+   "paging_token": "280423504292126721-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719514625",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0017083",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "EURC",
+   "base_asset_issuer": "GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2",
+   "counter_liquidity_pool_id": "53e659741983ecde31e64bda0bf5a3cceca74fbb85e5beccab3b212f859913fd",
+   "counter_amount": "0.0110438",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "HODL",
+   "counter_asset_issuer": "GAGG42ACMQ3454R7GB6JUAKU6OPT4EXPW4QWYKEKBVYDQJC3ELGW74AX",
+   "base_is_seller": false,
+   "price": {
+    "n": "110438",
+    "d": "17083"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/8967b98b5ba5ce14a14be4052a1268b0f6744dac04e15bb0c2349f1728cb9ebf"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292126721"
+    }
+   },
+   "id": "280423504292126721-1",
+   "paging_token": "280423504292126721-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "8967b98b5ba5ce14a14be4052a1268b0f6744dac04e15bb0c2349f1728cb9ebf",
+   "base_amount": "1.8061527",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "LIBRE",
+   "base_asset_issuer": "GAYCCWKECNGDRHYU3UTREBD2XLC3CUQN6FV22TKM4WCQER3IWR7TF5CY",
+   "counter_offer_id": "4892109522719514625",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "0.0110438",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "HODL",
+   "counter_asset_issuer": "GAGG42ACMQ3454R7GB6JUAKU6OPT4EXPW4QWYKEKBVYDQJC3ELGW74AX",
+   "base_is_seller": true,
+   "price": {
+    "n": "110438",
+    "d": "18061527"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/d178428ea23ac1d9e4890c2ab958a0e774c8eb81802bb409bc1a47dedbcdaf9e"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292126721"
+    }
+   },
+   "id": "280423504292126721-2",
+   "paging_token": "280423504292126721-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719514625",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "1.8061527",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "LIBRE",
+   "base_asset_issuer": "GAYCCWKECNGDRHYU3UTREBD2XLC3CUQN6FV22TKM4WCQER3IWR7TF5CY",
+   "counter_liquidity_pool_id": "d178428ea23ac1d9e4890c2ab958a0e774c8eb81802bb409bc1a47dedbcdaf9e",
+   "counter_amount": "0.1663940",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AJPY",
+   "counter_asset_issuer": "GDNUVPUOMWOF2ML5FA5E4HQDX7EHV3VCJTLLTO563PUMZKMHJUJIJSYI",
+   "base_is_seller": false,
+   "price": {
+    "n": "1663940",
+    "d": "18061527"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/0de28a0ca9fce053f9fe92fa49e934bfecdba7b352edc4946853246f57facb71"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292126721"
+    }
+   },
+   "id": "280423504292126721-3",
+   "paging_token": "280423504292126721-3",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "0de28a0ca9fce053f9fe92fa49e934bfecdba7b352edc4946853246f57facb71",
+   "base_amount": "3.5001242",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_offer_id": "4892109522719514625",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "0.1663940",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AJPY",
+   "counter_asset_issuer": "GDNUVPUOMWOF2ML5FA5E4HQDX7EHV3VCJTLLTO563PUMZKMHJUJIJSYI",
+   "base_is_seller": true,
+   "price": {
+    "n": "1663940",
+    "d": "35001242"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292126721"
+    }
+   },
+   "id": "280423504292126721-4",
+   "paging_token": "280423504292126721-4",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719514625",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "3.5001242",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_liquidity_pool_id": "96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c",
+   "counter_amount": "0.0019002",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDC",
+   "counter_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "base_is_seller": false,
+   "price": {
+    "n": "19002",
+    "d": "35001242"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GD3R23YMQQV6HISDGRQTFNFDL2HOZOGYGOVZS67J4LOYGT2ZR2F3KINA"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292126721"
+    }
+   },
+   "id": "280423504292126721-5",
+   "paging_token": "280423504292126721-5",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719514625",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0019002",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDC",
+   "base_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "counter_offer_id": "1864510202",
+   "counter_account": "GD3R23YMQQV6HISDGRQTFNFDL2HOZOGYGOVZS67J4LOYGT2ZR2F3KINA",
+   "counter_amount": "0.0017143",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "EURC",
+   "counter_asset_issuer": "GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2",
+   "base_is_seller": false,
+   "price": {
+    "n": "1000000",
+    "d": "1108431"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/87af178e12cd6a85d9ca86f3ffbb566635dd94a9717d0c5b316c311ddb3a09d1"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292229121"
+    }
+   },
+   "id": "280423504292229121-0",
+   "paging_token": "280423504292229121-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "87af178e12cd6a85d9ca86f3ffbb566635dd94a9717d0c5b316c311ddb3a09d1",
+   "base_amount": "0.0014758",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "XRP",
+   "base_asset_issuer": "GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5",
+   "counter_offer_id": "4892109522719617025",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "0.0017083",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "EURC",
+   "counter_asset_issuer": "GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2",
+   "base_is_seller": true,
+   "price": {
+    "n": "17083",
+    "d": "14758"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/5021dafc04b87326e7d851fadc113a8223eedbbdf1ec1ff13ed2f2a152097640"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292229121"
+    }
+   },
+   "id": "280423504292229121-1",
+   "paging_token": "280423504292229121-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719617025",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0014758",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "XRP",
+   "base_asset_issuer": "GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5",
+   "counter_liquidity_pool_id": "5021dafc04b87326e7d851fadc113a8223eedbbdf1ec1ff13ed2f2a152097640",
+   "counter_amount": "1.6021525",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AVES",
+   "counter_asset_issuer": "GCJFH6HI5UPQVTUUOAS7JPOEPCQZCNGM63GWMBL6ULGUL4XUXRIXXIEQ",
+   "base_is_seller": false,
+   "price": {
+    "n": "16021525",
+    "d": "14758"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/515533677db834361a97ac81067a2b9704e9606f9498fd04c14df8e76d5865f2"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292229121"
+    }
+   },
+   "id": "280423504292229121-2",
+   "paging_token": "280423504292229121-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "515533677db834361a97ac81067a2b9704e9606f9498fd04c14df8e76d5865f2",
+   "base_amount": "3.4956126",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_offer_id": "4892109522719617025",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "1.6021525",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AVES",
+   "counter_asset_issuer": "GCJFH6HI5UPQVTUUOAS7JPOEPCQZCNGM63GWMBL6ULGUL4XUXRIXXIEQ",
+   "base_is_seller": true,
+   "price": {
+    "n": "16021525",
+    "d": "34956126"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292229121"
+    }
+   },
+   "id": "280423504292229121-3",
+   "paging_token": "280423504292229121-3",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719617025",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "3.4956126",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_liquidity_pool_id": "96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c",
+   "counter_amount": "0.0018978",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDC",
+   "counter_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "base_is_seller": false,
+   "price": {
+    "n": "18978",
+    "d": "34956126"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GD3R23YMQQV6HISDGRQTFNFDL2HOZOGYGOVZS67J4LOYGT2ZR2F3KINA"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292229121"
+    }
+   },
+   "id": "280423504292229121-4",
+   "paging_token": "280423504292229121-4",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719617025",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0018978",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDC",
+   "base_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "counter_offer_id": "1864510202",
+   "counter_account": "GD3R23YMQQV6HISDGRQTFNFDL2HOZOGYGOVZS67J4LOYGT2ZR2F3KINA",
+   "counter_amount": "0.0017121",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "EURC",
+   "counter_asset_issuer": "GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2",
+   "base_is_seller": false,
+   "price": {
+    "n": "1000000",
+    "d": "1108431"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBXKW6ZBKXOLJFV4ZKG2AAXDAJ5X4LQU7CGDWH2L4Y3FYHH22RKFTGZP"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GCMS6AIGTINVWQVIX2AQLW7BQG5L4KXJB7MU45UNCS4OSCKGCTU523SY"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292298753"
+    }
+   },
+   "id": "280423504292298753-0",
+   "paging_token": "280423504292298753-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719686657",
+   "base_account": "GBXKW6ZBKXOLJFV4ZKG2AAXDAJ5X4LQU7CGDWH2L4Y3FYHH22RKFTGZP",
+   "base_amount": "2.1163077",
+   "base_asset_type": "native",
+   "counter_offer_id": "1864510228",
+   "counter_account": "GCMS6AIGTINVWQVIX2AQLW7BQG5L4KXJB7MU45UNCS4OSCKGCTU523SY",
+   "counter_amount": "653.0000000",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "LMX",
+   "counter_asset_issuer": "GCJF4534PAFBOQ6R7QLVMRKUQV2AMNGEXGGDDN2ISYAIN5XPKTLUMEXO",
+   "base_is_seller": false,
+   "price": {
+    "n": "10000000",
+    "d": "32409"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/49a48dd6aa8b247a553a07acd2957efa85fc0233a40af5bb75cf5d27624d42d9"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292315137"
+    }
+   },
+   "id": "280423504292315137-0",
+   "paging_token": "280423504292315137-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719703041",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.4538631",
+   "base_asset_type": "native",
+   "counter_liquidity_pool_id": "49a48dd6aa8b247a553a07acd2957efa85fc0233a40af5bb75cf5d27624d42d9",
+   "counter_amount": "0.0775148",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDM",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": false,
+   "price": {
+    "n": "775148",
+    "d": "4538631"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GAGIYA2P7NF5B5T6MRCGARCMGORDVKHM3OW52BCYVFDYEJFBMIF2UEDA"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292315137"
+    }
+   },
+   "id": "280423504292315137-1",
+   "paging_token": "280423504292315137-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719703041",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0775148",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDM",
+   "base_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_offer_id": "1864469546",
+   "counter_account": "GAGIYA2P7NF5B5T6MRCGARCMGORDVKHM3OW52BCYVFDYEJFBMIF2UEDA",
+   "counter_amount": "0.7607022",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "Tusd",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "1000000",
+    "d": "101899"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/c67acda3ff95080986b15e7e4e97470302ccf1b6f716e915fd9376e31d52bca6"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292315137"
+    }
+   },
+   "id": "280423504292315137-2",
+   "paging_token": "280423504292315137-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719703041",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.7607022",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "Tusd",
+   "base_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "counter_liquidity_pool_id": "c67acda3ff95080986b15e7e4e97470302ccf1b6f716e915fd9376e31d52bca6",
+   "counter_amount": "0.5561999",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "Fusd",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "5561999",
+    "d": "7607022"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/d8eb6fbf3964c43e0d1950f09dcdc2bdcbe9f8c9be79158a0ba4e62eea2c14e3"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292315137"
+    }
+   },
+   "id": "280423504292315137-3",
+   "paging_token": "280423504292315137-3",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "d8eb6fbf3964c43e0d1950f09dcdc2bdcbe9f8c9be79158a0ba4e62eea2c14e3",
+   "base_amount": "2365.8636272",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "poolboy",
+   "base_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "counter_offer_id": "4892109522719703041",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "0.5561999",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "Fusd",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": true,
+   "price": {
+    "n": "5561999",
+    "d": "23658636272"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292315137"
+    }
+   },
+   "id": "280423504292315137-4",
+   "paging_token": "280423504292315137-4",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74",
+   "base_amount": "0.0656485",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "4892109522719703041",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "2365.8636272",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "poolboy",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": true,
+   "price": {
+    "n": "23658636272",
+    "d": "656485"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/4ed8d49dd64134a2a19e8e2f0f035df095dfe6443a487af5018e6974a2065059"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292315137"
+    }
+   },
+   "id": "280423504292315137-5",
+   "paging_token": "280423504292315137-5",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719703041",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0656485",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_liquidity_pool_id": "4ed8d49dd64134a2a19e8e2f0f035df095dfe6443a487af5018e6974a2065059",
+   "counter_amount": "0.4545421",
+   "counter_asset_type": "native",
+   "base_is_seller": false,
+   "price": {
+    "n": "4545421",
+    "d": "656485"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331521"
+    }
+   },
+   "id": "280423504292331521-0",
+   "paging_token": "280423504292331521-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719719425",
+   "base_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "base_amount": "0.1016424",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDM",
+   "base_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_offer_id": "1709991933",
+   "counter_account": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_amount": "0.1016424",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "USDMPOOL",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": false,
+   "price": {
+    "n": "1",
+    "d": "1"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/c14d23dd8d5780ab2b624799eb7c2ecbff9e802e335791cd4cad62c5e72f28df"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331521"
+    }
+   },
+   "id": "280423504292331521-1",
+   "paging_token": "280423504292331521-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "c14d23dd8d5780ab2b624799eb7c2ecbff9e802e335791cd4cad62c5e72f28df",
+   "base_amount": "0.0851381",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "4892109522719719425",
+   "counter_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "counter_amount": "0.1016424",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "USDMPOOL",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": true,
+   "price": {
+    "n": "1016424",
+    "d": "851381"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/b53b250a36be14bf2a5af64c72059dccd11949137cd3961f6345b08b461ebfac"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331521"
+    }
+   },
+   "id": "280423504292331521-2",
+   "paging_token": "280423504292331521-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719719425",
+   "base_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "base_amount": "0.0851381",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_liquidity_pool_id": "b53b250a36be14bf2a5af64c72059dccd11949137cd3961f6345b08b461ebfac",
+   "counter_amount": "352.7021587",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AQUA",
+   "counter_asset_issuer": "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA",
+   "base_is_seller": false,
+   "price": {
+    "n": "3527021587",
+    "d": "851381"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/b53b250a36be14bf2a5af64c72059dccd11949137cd3961f6345b08b461ebfac"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331522"
+    }
+   },
+   "id": "280423504292331522-0",
+   "paging_token": "280423504292331522-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "b53b250a36be14bf2a5af64c72059dccd11949137cd3961f6345b08b461ebfac",
+   "base_amount": "0.0846335",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "4892109522719719426",
+   "counter_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "counter_amount": "352.7243158",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AQUA",
+   "counter_asset_issuer": "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA",
+   "base_is_seller": true,
+   "price": {
+    "n": "3527243158",
+    "d": "846335"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331522"
+    }
+   },
+   "id": "280423504292331522-1",
+   "paging_token": "280423504292331522-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719719426",
+   "base_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "base_amount": "0.0846335",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_liquidity_pool_id": "7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74",
+   "counter_amount": "3031.2595333",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "poolboy",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "30312595333",
+    "d": "846335"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/0e0962d58b496a56a4c1f3144a7bdcf5cb169d96019fbd6e305210676748c9d5"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331522"
+    }
+   },
+   "id": "280423504292331522-2",
+   "paging_token": "280423504292331522-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719719426",
+   "base_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "base_amount": "3031.2595333",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "poolboy",
+   "base_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "counter_liquidity_pool_id": "0e0962d58b496a56a4c1f3144a7bdcf5cb169d96019fbd6e305210676748c9d5",
+   "counter_amount": "0.0261479",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "robovac",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "261479",
+    "d": "30312595333"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/49a48dd6aa8b247a553a07acd2957efa85fc0233a40af5bb75cf5d27624d42d9"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331523"
+    }
+   },
+   "id": "280423504292331523-0",
+   "paging_token": "280423504292331523-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "49a48dd6aa8b247a553a07acd2957efa85fc0233a40af5bb75cf5d27624d42d9",
+   "base_amount": "0.5919032",
+   "base_asset_type": "native",
+   "counter_offer_id": "4892109522719719427",
+   "counter_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "counter_amount": "0.1016999",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDM",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": true,
+   "price": {
+    "n": "1016999",
+    "d": "5919032"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/4ed8d49dd64134a2a19e8e2f0f035df095dfe6443a487af5018e6974a2065059"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331524"
+    }
+   },
+   "id": "280423504292331524-0",
+   "paging_token": "280423504292331524-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "4ed8d49dd64134a2a19e8e2f0f035df095dfe6443a487af5018e6974a2065059",
+   "base_amount": "0.0849745",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "4892109522719719428",
+   "counter_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "counter_amount": "0.5918996",
+   "counter_asset_type": "native",
+   "base_is_seller": true,
+   "price": {
+    "n": "5918996",
+    "d": "849745"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331524"
+    }
+   },
+   "id": "280423504292331524-1",
+   "paging_token": "280423504292331524-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719719428",
+   "base_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "base_amount": "0.0849745",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_liquidity_pool_id": "7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74",
+   "counter_amount": "3038.7306145",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "poolboy",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "30387306145",
+    "d": "849745"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/0e0962d58b496a56a4c1f3144a7bdcf5cb169d96019fbd6e305210676748c9d5"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292331524"
+    }
+   },
+   "id": "280423504292331524-2",
+   "paging_token": "280423504292331524-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719719428",
+   "base_account": "GCSO6DAFG52JZDJOB2ZXY3FZBCFJIEINR2BXNA2TTTCMFAOL5SQMIPW6",
+   "base_amount": "3038.7306145",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "poolboy",
+   "base_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "counter_liquidity_pool_id": "0e0962d58b496a56a4c1f3144a7bdcf5cb169d96019fbd6e305210676748c9d5",
+   "counter_amount": "0.0262107",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "robovac",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "262107",
+    "d": "30387306145"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/cc8e282251f0f027c12ac5b599b2155e3381df1961ddde815c88abf2ff9e86da"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292405249"
+    }
+   },
+   "id": "280423504292405249-0",
+   "paging_token": "280423504292405249-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719793153",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0633189",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDC",
+   "base_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "counter_liquidity_pool_id": "cc8e282251f0f027c12ac5b599b2155e3381df1961ddde815c88abf2ff9e86da",
+   "counter_amount": "0.0661080",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDM",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": false,
+   "price": {
+    "n": "661080",
+    "d": "633189"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GAGIYA2P7NF5B5T6MRCGARCMGORDVKHM3OW52BCYVFDYEJFBMIF2UEDA"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292405249"
+    }
+   },
+   "id": "280423504292405249-1",
+   "paging_token": "280423504292405249-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719793153",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0661080",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDM",
+   "base_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_offer_id": "1864469546",
+   "counter_account": "GAGIYA2P7NF5B5T6MRCGARCMGORDVKHM3OW52BCYVFDYEJFBMIF2UEDA",
+   "counter_amount": "0.6487600",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "Tusd",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "1000000",
+    "d": "101899"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/c67acda3ff95080986b15e7e4e97470302ccf1b6f716e915fd9376e31d52bca6"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292405249"
+    }
+   },
+   "id": "280423504292405249-2",
+   "paging_token": "280423504292405249-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719793153",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.6487600",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "Tusd",
+   "base_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "counter_liquidity_pool_id": "c67acda3ff95080986b15e7e4e97470302ccf1b6f716e915fd9376e31d52bca6",
+   "counter_amount": "0.4743510",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "Fusd",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "4743510",
+    "d": "6487600"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/d8eb6fbf3964c43e0d1950f09dcdc2bdcbe9f8c9be79158a0ba4e62eea2c14e3"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292405249"
+    }
+   },
+   "id": "280423504292405249-3",
+   "paging_token": "280423504292405249-3",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "d8eb6fbf3964c43e0d1950f09dcdc2bdcbe9f8c9be79158a0ba4e62eea2c14e3",
+   "base_amount": "2014.4709492",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "poolboy",
+   "base_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "counter_offer_id": "4892109522719793153",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "0.4743510",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "Fusd",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": true,
+   "price": {
+    "n": "4743510",
+    "d": "20144709492"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292405249"
+    }
+   },
+   "id": "280423504292405249-4",
+   "paging_token": "280423504292405249-4",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74",
+   "base_amount": "0.0560097",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "4892109522719793153",
+   "counter_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "counter_amount": "2014.4709492",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "poolboy",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": true,
+   "price": {
+    "n": "20144709492",
+    "d": "560097"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GDATTIMZFO3KHGM2GNOGQ6KJW4XEUOPDTVC34AU6C6SO3KUCKFM7YIR7"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292405249"
+    }
+   },
+   "id": "280423504292405249-5",
+   "paging_token": "280423504292405249-5",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522719793153",
+   "base_account": "GBTB3MJPQKPIWLYX34IKBE7ENT46ZDVQGPAVHGBDOMNA4HP6Q2KKJFLH",
+   "base_amount": "0.0560097",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "1864500574",
+   "counter_account": "GDATTIMZFO3KHGM2GNOGQ6KJW4XEUOPDTVC34AU6C6SO3KUCKFM7YIR7",
+   "counter_amount": "0.0634173",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDC",
+   "counter_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "base_is_seller": false,
+   "price": {
+    "n": "113225496",
+    "d": "99999900"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/de318bcad6e247a319fda2bf4ce3a1d8097bc206ec6b1f568b7ad2f807efe2ec"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GD77RS525TLPXBSFTZSHDEVDSCDO3NQBTATLRJQVHBOTKUC2PMGPTQEF"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292577281"
+    }
+   },
+   "id": "280423504292577281-0",
+   "paging_token": "280423504292577281-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "de318bcad6e247a319fda2bf4ce3a1d8097bc206ec6b1f568b7ad2f807efe2ec",
+   "base_amount": "90.3682160",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "LSP",
+   "base_asset_issuer": "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK",
+   "counter_offer_id": "4892109522719965185",
+   "counter_account": "GD77RS525TLPXBSFTZSHDEVDSCDO3NQBTATLRJQVHBOTKUC2PMGPTQEF",
+   "counter_amount": "0.0128560",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDC",
+   "counter_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "base_is_seller": true,
+   "price": {
+    "n": "128560",
+    "d": "903682160"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/f352d4943082e7237d410c1200633ca95fc9407b1a8d2c4f513c8adbb2c22d47"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GD77RS525TLPXBSFTZSHDEVDSCDO3NQBTATLRJQVHBOTKUC2PMGPTQEF"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292577281"
+    }
+   },
+   "id": "280423504292577281-1",
+   "paging_token": "280423504292577281-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "f352d4943082e7237d410c1200633ca95fc9407b1a8d2c4f513c8adbb2c22d47",
+   "base_amount": "23.7191615",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_offer_id": "4892109522719965185",
+   "counter_account": "GD77RS525TLPXBSFTZSHDEVDSCDO3NQBTATLRJQVHBOTKUC2PMGPTQEF",
+   "counter_amount": "90.3682160",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "LSP",
+   "counter_asset_issuer": "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK",
+   "base_is_seller": true,
+   "price": {
+    "n": "903682160",
+    "d": "237191615"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GD77RS525TLPXBSFTZSHDEVDSCDO3NQBTATLRJQVHBOTKUC2PMGPTQEF"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292577281"
+    }
+   },
+   "id": "280423504292577281-2",
+   "paging_token": "280423504292577281-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522719965185",
+   "base_account": "GD77RS525TLPXBSFTZSHDEVDSCDO3NQBTATLRJQVHBOTKUC2PMGPTQEF",
+   "base_amount": "23.7191615",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_liquidity_pool_id": "96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c",
+   "counter_amount": "0.0128773",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDC",
+   "counter_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "base_is_seller": false,
+   "price": {
+    "n": "128773",
+    "d": "237191615"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBMLR5JXACA4GTMEFVWE4WEP6OBUS2RGZSFK3PPVEIPIOIBCC5OE5H7I"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GD7KTP5VNRQI36XAYLED3PDLY5WVL6J6BOJMFKDF4I4FIPIAM7D4LRKY"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292634625"
+    }
+   },
+   "id": "280423504292634625-0",
+   "paging_token": "280423504292634625-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "1864506342",
+   "base_account": "GBMLR5JXACA4GTMEFVWE4WEP6OBUS2RGZSFK3PPVEIPIOIBCC5OE5H7I",
+   "base_amount": "2.5214876",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDC",
+   "base_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "counter_offer_id": "4892109522720022529",
+   "counter_account": "GD7KTP5VNRQI36XAYLED3PDLY5WVL6J6BOJMFKDF4I4FIPIAM7D4LRKY",
+   "counter_amount": "15.4017990",
+   "counter_asset_type": "native",
+   "base_is_seller": true,
+   "price": {
+    "n": "4999950",
+    "d": "818561"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/857e0bf39c6e8aa775df78af7c861b205d7a43701093e129b7fa91b44325f3c7"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292642817"
+    }
+   },
+   "id": "280423504292642817-0",
+   "paging_token": "280423504292642817-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522720030721",
+   "base_account": "GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT",
+   "base_amount": "0.0200000",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "yXLM",
+   "base_asset_issuer": "GARDNV3Q7YGT4AKSDF25LT32YSCCW4EV22Y2TV3I2PU2MMXJTEDL5T55",
+   "counter_liquidity_pool_id": "857e0bf39c6e8aa775df78af7c861b205d7a43701093e129b7fa91b44325f3c7",
+   "counter_amount": "0.0034226",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDM",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": false,
+   "price": {
+    "n": "34226",
+    "d": "200000"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292642817"
+    }
+   },
+   "id": "280423504292642817-1",
+   "paging_token": "280423504292642817-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "orderbook",
+   "base_offer_id": "4892109522720030721",
+   "base_account": "GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT",
+   "base_amount": "0.0034226",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "USDM",
+   "base_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_offer_id": "1709991933",
+   "counter_account": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_amount": "0.0034226",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "USDMPOOL",
+   "counter_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "base_is_seller": false,
+   "price": {
+    "n": "1",
+    "d": "1"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/7c9c14b42071f9d0207b64915933af38978735918c4199eb5213555668556a63"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292642817"
+    }
+   },
+   "id": "280423504292642817-2",
+   "paging_token": "280423504292642817-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522720030721",
+   "base_account": "GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT",
+   "base_amount": "0.0034226",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "USDMPOOL",
+   "base_asset_issuer": "GDHDC4GBNPMENZAOBB4NCQ25TGZPDRK6ZGWUGSI22TVFATOLRPSUUSDM",
+   "counter_liquidity_pool_id": "7c9c14b42071f9d0207b64915933af38978735918c4199eb5213555668556a63",
+   "counter_amount": "104.1498132",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "poolboy",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": false,
+   "price": {
+    "n": "1041498132",
+    "d": "34226"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292642817"
+    }
+   },
+   "id": "280423504292642817-3",
+   "paging_token": "280423504292642817-3",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "7488fca33c65aa5c16852367c38c485a6df02da17f451b922ff2435424442a74",
+   "base_amount": "0.0028941",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_offer_id": "4892109522720030721",
+   "counter_account": "GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT",
+   "counter_amount": "104.1498132",
+   "counter_asset_type": "credit_alphanum12",
+   "counter_asset_code": "poolboy",
+   "counter_asset_issuer": "GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+   "base_is_seller": true,
+   "price": {
+    "n": "1041498132",
+    "d": "28941"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/4ed8d49dd64134a2a19e8e2f0f035df095dfe6443a487af5018e6974a2065059"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292642817"
+    }
+   },
+   "id": "280423504292642817-4",
+   "paging_token": "280423504292642817-4",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522720030721",
+   "base_account": "GBDHHLYIRZMO6LKWY2SY5GXKR6GAOD5MJFBGMQJQ4OHAHYEKHG7OXQMT",
+   "base_amount": "0.0028941",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "EURMTL",
+   "base_asset_issuer": "GACKTN5DAZGWXRWB2WLM6OPBDHAMT6SJNGLJZPQMEZBUR4JUGBX2UK7V",
+   "counter_liquidity_pool_id": "4ed8d49dd64134a2a19e8e2f0f035df095dfe6443a487af5018e6974a2065059",
+   "counter_amount": "0.0200384",
+   "counter_asset_type": "native",
+   "base_is_seller": false,
+   "price": {
+    "n": "200384",
+    "d": "28941"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GDBV4M4BPRQGZAAUED2UR3DVBW3R73P3XNNLDLRTH2RWBABUK2MIZ2VU"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/b33b54760f76eb9f33f09ebdb7e2cb516c73f05d037063ac0b6bd58d01d6b3d2"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292798465"
+    }
+   },
+   "id": "280423504292798465-0",
+   "paging_token": "280423504292798465-0",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522720186369",
+   "base_account": "GDBV4M4BPRQGZAAUED2UR3DVBW3R73P3XNNLDLRTH2RWBABUK2MIZ2VU",
+   "base_amount": "0.0091754",
+   "base_asset_type": "credit_alphanum12",
+   "base_asset_code": "yUSDC",
+   "base_asset_issuer": "GDGTVWSM4MGS4T7Z6W4RPWOCHE2I6RDFCIFZGS3DOA63LWQTRNZNTTFF",
+   "counter_liquidity_pool_id": "b33b54760f76eb9f33f09ebdb7e2cb516c73f05d037063ac0b6bd58d01d6b3d2",
+   "counter_amount": "7.7672919",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AVES",
+   "counter_asset_issuer": "GCJFH6HI5UPQVTUUOAS7JPOEPCQZCNGM63GWMBL6ULGUL4XUXRIXXIEQ",
+   "base_is_seller": false,
+   "price": {
+    "n": "77672919",
+    "d": "91754"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/liquidity_pools/515533677db834361a97ac81067a2b9704e9606f9498fd04c14df8e76d5865f2"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/accounts/GDBV4M4BPRQGZAAUED2UR3DVBW3R73P3XNNLDLRTH2RWBABUK2MIZ2VU"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292798465"
+    }
+   },
+   "id": "280423504292798465-1",
+   "paging_token": "280423504292798465-1",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_liquidity_pool_id": "515533677db834361a97ac81067a2b9704e9606f9498fd04c14df8e76d5865f2",
+   "base_amount": "16.9458710",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_offer_id": "4892109522720186369",
+   "counter_account": "GDBV4M4BPRQGZAAUED2UR3DVBW3R73P3XNNLDLRTH2RWBABUK2MIZ2VU",
+   "counter_amount": "7.7672919",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "AVES",
+   "counter_asset_issuer": "GCJFH6HI5UPQVTUUOAS7JPOEPCQZCNGM63GWMBL6ULGUL4XUXRIXXIEQ",
+   "base_is_seller": true,
+   "price": {
+    "n": "77672919",
+    "d": "169458710"
+   }
+  },
+  {
+   "_links": {
+    "self": {
+     "href": ""
+    },
+    "base": {
+     "href": "https://horizon.stellar.org/accounts/GDBV4M4BPRQGZAAUED2UR3DVBW3R73P3XNNLDLRTH2RWBABUK2MIZ2VU"
+    },
+    "counter": {
+     "href": "https://horizon.stellar.org/liquidity_pools/96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c"
+    },
+    "operation": {
+     "href": "https://horizon.stellar.org/operations/280423504292798465"
+    }
+   },
+   "id": "280423504292798465-2",
+   "paging_token": "280423504292798465-2",
+   "ledger_close_time": "2026-11-03T21:39:24Z",
+   "trade_type": "liquidity_pool",
+   "liquidity_pool_fee_bp": 30,
+   "base_offer_id": "4892109522720186369",
+   "base_account": "GDBV4M4BPRQGZAAUED2UR3DVBW3R73P3XNNLDLRTH2RWBABUK2MIZ2VU",
+   "base_amount": "16.9458710",
+   "base_asset_type": "credit_alphanum4",
+   "base_asset_code": "AFR",
+   "base_asset_issuer": "GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+   "counter_liquidity_pool_id": "96cad2d0bb55867275f7c11db2a6bfe2f719fd5a5589d3a064a6447106a7f27c",
+   "counter_amount": "0.0091999",
+   "counter_asset_type": "credit_alphanum4",
+   "counter_asset_code": "USDC",
+   "counter_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+   "base_is_seller": false,
+   "price": {
+    "n": "91999",
+    "d": "169458710"
+   }
+  }
+ ]
+}

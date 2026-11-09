@@ -1,0 +1,11 @@
+{
+  "bootstrap_checkpoint": 65304703,
+  "captured_at_unix": 1793815621,
+  "command": "data/bin/sdx3 diff --state data/state --out fixtures/diff/20261104T1804Z --auto 8 --lake http://aws-public-blockchain.s3.amazonaws.com --workers 4",
+  "horizon": "https://horizon.stellar.org",
+  "lake": "http://aws-public-blockchain.s3.amazonaws.com",
+  "network": "pubnet",
+  "note": "read-only GETs; Horizon bodies are verbatim; ours computed by sdx at the same Latest-Ledger",
+  "sdx_version": "0.1.0",
+  "state_ledger_at_start": 65305514
+}

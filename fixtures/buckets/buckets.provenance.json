@@ -1,0 +1,8 @@
+{
+  "captured_at": "2026-11-03T22:08:48Z",
+  "script": "scripts/capture-fixtures.sh buckets 65291519",
+  "checkpoint": 65291519,
+  "has": "https://history.stellar.org/prd/core-live/core_live_001/history/03/e4/44/history-03e444ff.json",
+  "files": { "bucket-57d038613d06bc53baa182d543abce2546d6a5cd9b06d5f3fbf91bb9e1e1bfe7.xdr.gz": "https://history.stellar.org/prd/core-live/core_live_001/bucket/57/d0/38/bucket-57d038613d06bc53baa182d543abce2546d6a5cd9b06d5f3fbf91bb9e1e1bfe7.xdr.gz","bucket-5885f0c1fbb21cb142a3599def3fa969afa4e307bc2e95d39ab14547eaded55d.xdr.gz": "https://history.stellar.org/prd/core-live/core_live_001/bucket/58/85/f0/bucket-5885f0c1fbb21cb142a3599def3fa969afa4e307bc2e95d39ab14547eaded55d.xdr.gz" },
+  "note": "level-0 curr and snap live buckets; mainnet, public, read-only"
+}

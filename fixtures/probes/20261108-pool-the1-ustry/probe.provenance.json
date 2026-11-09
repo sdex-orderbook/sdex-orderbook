@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-08T05:00:23Z",
+  "script": "scripts/probe-pool.sh THE1:GBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW USTRY:GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC 0.0010000",
+  "horizon": "https://horizon.stellar.org",
+  "kind": "live read-only GETs, stored verbatim",
+  "requests": {
+    "pool": {"url": "https://horizon.stellar.org/liquidity_pools?reserves=THE1:GBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW,USTRY:GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC", "latest_ledger": "65365594"},
+    "strict-send": {"url": "https://horizon.stellar.org/paths/strict-send?source_asset_type=credit_alphanum4&source_asset_code=THE1&source_asset_issuer=GBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW&source_amount=0.0010000&destination_assets=USTRY:GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC", "latest_ledger": "65365594"},
+    "order-book": {"url": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=THE1&selling_asset_issuer=GBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW&buying_asset_type=credit_alphanum12&buying_asset_code=USTRY&buying_asset_issuer=GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC", "latest_ledger": "65365595"}
+  }
+}

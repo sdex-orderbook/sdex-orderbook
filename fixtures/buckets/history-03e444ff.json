@@ -1,0 +1,164 @@
+{
+    "version": 2,
+    "server": "stellar-core 30.0.0 (0e49751aa9ddf892302cca02cea7f3f5d97df9f1)",
+    "currentLedger": 65291519,
+    "networkPassphrase": "Public Global Stellar Network ; September 2015",
+    "currentBuckets": [
+        {
+            "curr": "57d038613d06bc53baa182d543abce2546d6a5cd9b06d5f3fbf91bb9e1e1bfe7",
+            "next": {
+                "state": 0
+            },
+            "snap": "5885f0c1fbb21cb142a3599def3fa969afa4e307bc2e95d39ab14547eaded55d"
+        },
+        {
+            "curr": "bd25d3e803112abb0d83d73ae6770c489bfb66d73bd1841ad56c82c88e64960d",
+            "next": {
+                "state": 0
+            },
+            "snap": "3f2433ffd0375fbe97202d486d91cfd5c3c9c838f3e8b58b369b42f6f2750abf"
+        },
+        {
+            "curr": "52bb8de10c9656c9c667bd556f366fc39860afee81542d38374d552b38fd3994",
+            "next": {
+                "state": 0
+            },
+            "snap": "0cd3643446dc9b9842414986de12ce1cbd4d80c509f9b714dc47be2d5c85781d"
+        },
+        {
+            "curr": "91461f1db3b17670c57f57ad134f9350086ae9b4813c21230f7fd3444de2799b",
+            "next": {
+                "state": 0
+            },
+            "snap": "6dd91f3bc85e046de36fc542746196e2c2bd4730bc6e4143e6fa10a04c5ca231"
+        },
+        {
+            "curr": "668e1797475a9816c778dc952af994a62939d269fbf4ec23e0d42821f5126d95",
+            "next": {
+                "state": 0
+            },
+            "snap": "4a6bee52715578c468f4d64651aecb66da9d7a51b0f465e3e147cb043bed1a6b"
+        },
+        {
+            "curr": "da39798da2f89f3ab15e87b75314c5ddefcaac7f2f6945cf84830dd0020c9c59",
+            "next": {
+                "state": 0
+            },
+            "snap": "30ff331989f189b244af8bae7f064bed74fa4dc8fa04b935bd4097cf4fc4b408"
+        },
+        {
+            "curr": "cbd0911977766f41b8868ab3d084d7e94c234bdd3b1e3d8de55c6e055e995f60",
+            "next": {
+                "state": 0
+            },
+            "snap": "098e8b0fa6da7f9a38914c1d2a070abcf1b573cac9faad41f3ae664f94def8af"
+        },
+        {
+            "curr": "90727f68770c0961a58c9be61b2363c6d009645ca80cc98a67ef23d443fe044c",
+            "next": {
+                "state": 0
+            },
+            "snap": "73be8d41638af3e45a0410613e1ef11099940de5f64b60b78a28f63bdbb78c49"
+        },
+        {
+            "curr": "6d459033923305ca7818ea64452bf074755be7a13c113ac340f8051d5c2ac53e",
+            "next": {
+                "state": 0
+            },
+            "snap": "46f7344a09b1ad11bcebd9d875193a5182d027877d4036463ee97259fd0d3fd1"
+        },
+        {
+            "curr": "e064731ce568daad1d0f8a702b1f5ffd2a325977aa10385060fb0e4566175db3",
+            "next": {
+                "state": 0
+            },
+            "snap": "c365cfe22521b887d2fdb1b266e318379c19f196cd550d087e9e49704322e2ee"
+        },
+        {
+            "curr": "d7b92431269112e41630ac0d84e591cf520fd4f2f2fe4c93ae3642b8250ef5c9",
+            "next": {
+                "state": 0
+            },
+            "snap": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+    ],
+    "hotArchiveBuckets": [
+        {
+            "curr": "afe0d224f03f22fdc2bb182ac24b58235e2e44162574d429629718333193b41f",
+            "next": {
+                "state": 0
+            },
+            "snap": "92863b5919f35a36067ec18ea2bbd58433e8a4c605c7834d977670fd87b898ce"
+        },
+        {
+            "curr": "92863b5919f35a36067ec18ea2bbd58433e8a4c605c7834d977670fd87b898ce",
+            "next": {
+                "state": 0
+            },
+            "snap": "92863b5919f35a36067ec18ea2bbd58433e8a4c605c7834d977670fd87b898ce"
+        },
+        {
+            "curr": "eed3542f052a666d38969911a3b1d9f66cc8d69b168752eeb043340f9422be58",
+            "next": {
+                "state": 0
+            },
+            "snap": "92863b5919f35a36067ec18ea2bbd58433e8a4c605c7834d977670fd87b898ce"
+        },
+        {
+            "curr": "907e0f3d432df83858d143ada4d6c308fea39d8fe580e903ce14e933247c8104",
+            "next": {
+                "state": 0
+            },
+            "snap": "64661587b1560406d5efceab1a134d5ec7966943ff5f89dedb9a0674c00ceade"
+        },
+        {
+            "curr": "831ce3cd2c4ea8f4267e1fe3339dbd46f8c04ea6e9fea79c1a172980c74b3b6d",
+            "next": {
+                "state": 0
+            },
+            "snap": "eb9ca53ca4963a89ac740a837767220add5e793608adc79ca84deb44ea769dcb"
+        },
+        {
+            "curr": "1b945094e33135a06bda86d4c1f451a0b46903a503812f9a13763b20452252c2",
+            "next": {
+                "state": 0
+            },
+            "snap": "3235189ea2875925328fd458919be88aae03145973f553818bbcac823313abc8"
+        },
+        {
+            "curr": "96ef3d10e59ad894828e1ab61499156052c14dfac9c8638b29f2aff41b77a64c",
+            "next": {
+                "state": 0
+            },
+            "snap": "c8cfbd1aaadeef6e2b708bb24774f312842661cd9fa78210fa7244cffb08b32a"
+        },
+        {
+            "curr": "0f5601773c464f1d592b8c33de1916bf11f418b384dca0019d6794cf1f248035",
+            "next": {
+                "state": 0
+            },
+            "snap": "0ce08cb41f33bb29cd6181e5d7f000fa632123d7e69a7472c2392e137bccd9ff"
+        },
+        {
+            "curr": "f461453763f7aa6af5227b3d7a19acf50e75b4ee4bea8fe44d4cf1270fd48760",
+            "next": {
+                "state": 0
+            },
+            "snap": "cdad68d909d44a426fa949729a98c2d8f92ddf727cd9cabdd1728123e6870c68"
+        },
+        {
+            "curr": "6fdf956251f33163621c259eb067d15f0c39e054ce1506ee9d0df1120aa21545",
+            "next": {
+                "state": 0
+            },
+            "snap": "142b96e2764fb2d403970d9434d6d1b1674e8fe9873d44425d41a319316a26c8"
+        },
+        {
+            "curr": "c6e5441572c24a268e65d10ec574f4e57ee9baae28cd6cea4de59f5f0b076090",
+            "next": {
+                "state": 0
+            },
+            "snap": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+    ]
+}

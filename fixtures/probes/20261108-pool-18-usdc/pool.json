@@ -1,0 +1,50 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://horizon.stellar.org/liquidity_pools?cursor=\u0026limit=10\u0026order=asc\u0026reserves=18%3AGBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX%2CUSDC%3AGA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    },
+    "next": {
+      "href": "https://horizon.stellar.org/liquidity_pools?cursor=05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494\u0026limit=10\u0026order=asc\u0026reserves=18%3AGBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX%2CUSDC%3AGA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    },
+    "prev": {
+      "href": "https://horizon.stellar.org/liquidity_pools?cursor=05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494\u0026limit=10\u0026order=desc\u0026reserves=18%3AGBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX%2CUSDC%3AGA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    }
+  },
+  "_embedded": {
+    "records": [
+      {
+        "_links": {
+          "self": {
+            "href": "https://horizon.stellar.org/liquidity_pools/05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494"
+          },
+          "transactions": {
+            "href": "https://horizon.stellar.org/liquidity_pools/05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494/transactions{?cursor,limit,order}",
+            "templated": true
+          },
+          "operations": {
+            "href": "https://horizon.stellar.org/liquidity_pools/05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494/operations{?cursor,limit,order}",
+            "templated": true
+          }
+        },
+        "id": "05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494",
+        "paging_token": "05442dce409cdfab1f3bc4bda45a5a3b9d66ea445068aacebefff895f7fc7494",
+        "fee_bp": 30,
+        "type": "constant_product",
+        "total_trustlines": "2",
+        "total_shares": "0.3881669",
+        "reserves": [
+          {
+            "asset": "18:GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX",
+            "amount": "0.0129024"
+          },
+          {
+            "asset": "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+            "amount": "13.0498007"
+          }
+        ],
+        "last_modified_ledger": 65364568,
+        "last_modified_time": "2026-11-08T03:34:42Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://horizon.stellar.org/liquidity_pools?cursor=\u0026limit=10\u0026order=asc\u0026reserves=THE1%3AGBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW%2CUSTRY%3AGCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
+    },
+    "next": {
+      "href": "https://horizon.stellar.org/liquidity_pools?cursor=\u0026limit=10\u0026order=asc\u0026reserves=THE1%3AGBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW%2CUSTRY%3AGCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
+    },
+    "prev": {
+      "href": "https://horizon.stellar.org/liquidity_pools?cursor=\u0026limit=10\u0026order=desc\u0026reserves=THE1%3AGBGRBCUB6L7LH4JQ6EPDP7REH2DDACMCUQI76M3P6DM52QWU2Z5LIEVW%2CUSTRY%3AGCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
+    }
+  },
+  "_embedded": {
+    "records": []
+  }
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "kind": "order_book",
+    "selling": "native",
+    "buying": "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+    "limit": 20
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "4.0000000",
+    "destinations": [
+      "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "4.0000000",
+    "sources": [
+      "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "400.0000000",
+    "destinations": [
+      "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "400.0000000",
+    "sources": [
+      "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "4000.0000000",
+    "destinations": [
+      "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "4000.0000000",
+    "sources": [
+      "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    ]
+  },
+  {
+    "kind": "order_book",
+    "selling": "native",
+    "buying": "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA",
+    "limit": 20
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "0.0479931",
+    "destinations": [
+      "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "0.0479931",
+    "sources": [
+      "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "4.7993151",
+    "destinations": [
+      "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "4.7993151",
+    "sources": [
+      "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "47.9931512",
+    "destinations": [
+      "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "47.9931512",
+    "sources": [
+      "AQUA:GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA"
+    ]
+  },
+  {
+    "kind": "order_book",
+    "selling": "native",
+    "buying": "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH",
+    "limit": 20
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "0.0500000",
+    "destinations": [
+      "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "0.0500000",
+    "sources": [
+      "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "5.0000000",
+    "destinations": [
+      "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "5.0000000",
+    "sources": [
+      "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "50.0000000",
+    "destinations": [
+      "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "50.0000000",
+    "sources": [
+      "SHX:GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH"
+    ]
+  },
+  {
+    "kind": "order_book",
+    "selling": "native",
+    "buying": "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX",
+    "limit": 20
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "0.0008881",
+    "destinations": [
+      "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "0.0008881",
+    "sources": [
+      "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "0.0888106",
+    "destinations": [
+      "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "0.0888106",
+    "sources": [
+      "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX"
+    ]
+  },
+  {
+    "kind": "strict_send",
+    "source": "native",
+    "amount": "0.8881062",
+    "destinations": [
+      "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX"
+    ]
+  },
+  {
+    "kind": "strict_receive",
+    "destination": "native",
+    "amount": "0.8881062",
+    "sources": [
+      "DOGET:GDOEVDDBU6OBWKL7VHDAOKD77UP4DKHQYKOKJJT5PR3WRDBTX35HUEUX"
+    ]
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+    "counter": "native",
+    "resolution": 60000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+    "counter": "native",
+    "resolution": 300000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "Cccrbv:GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+    "counter": "Crobovac:GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+    "resolution": 60000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "Cccrbv:GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+    "counter": "Crobovac:GAFB7IYPCYZCODQBB5BR5JO45JC4PPVLARUAXQSFHWTLH2KMHPWJ36GD",
+    "resolution": 300000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "USDX:GA5G7HKQBJ4PDKIVE53FOZPY3C7YZI5R4QTDQN3UKILQYME7KUL2CKKH",
+    "counter": "XPi:GDOFJEZ3FUWAC2EVHPRMJPSWPOD3KJF7FTXFZIERFFPB2VMTRQLZFUEF",
+    "resolution": 60000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "USDX:GA5G7HKQBJ4PDKIVE53FOZPY3C7YZI5R4QTDQN3UKILQYME7KUL2CKKH",
+    "counter": "XPi:GDOFJEZ3FUWAC2EVHPRMJPSWPOD3KJF7FTXFZIERFFPB2VMTRQLZFUEF",
+    "resolution": 300000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "LMX:GCJF4534PAFBOQ6R7QLVMRKUQV2AMNGEXGGDDN2ISYAIN5XPKTLUMEXO",
+    "counter": "native",
+    "resolution": 60000
+  },
+  {
+    "kind": "trade_aggregations",
+    "base": "LMX:GCJF4534PAFBOQ6R7QLVMRKUQV2AMNGEXGGDDN2ISYAIN5XPKTLUMEXO",
+    "counter": "native",
+    "resolution": 300000
+  }
+]

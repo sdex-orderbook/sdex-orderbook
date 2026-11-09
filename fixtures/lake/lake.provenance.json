@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-11-03T21:55:31Z",
+  "script": "scripts/capture-fixtures.sh lake 65291184 5",
+  "lake": "https://aws-public-blockchain.s3.amazonaws.com",
+  "horizon": "https://horizon.stellar.org",
+  "ledgers": [65291184, 65291188],
+  "objects": ["v1.1/stellar/ledgers/pubnet/FC1BE7FF--65280000-65343999/FC1BBC4F--65291184.xdr.zst","v1.1/stellar/ledgers/pubnet/FC1BE7FF--65280000-65343999/FC1BBC4E--65291185.xdr.zst","v1.1/stellar/ledgers/pubnet/FC1BE7FF--65280000-65343999/FC1BBC4D--65291186.xdr.zst","v1.1/stellar/ledgers/pubnet/FC1BE7FF--65280000-65343999/FC1BBC4C--65291187.xdr.zst","v1.1/stellar/ledgers/pubnet/FC1BE7FF--65280000-65343999/FC1BBC4B--65291188.xdr.zst"],
+  "horizon_trades": "horizon-trades-<seq>.json = all records of GET /trades?cursor=<seq<<32>&order=asc&limit=200 (paged) whose operation id belongs to <seq>"
+}

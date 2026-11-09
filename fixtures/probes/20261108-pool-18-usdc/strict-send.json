@@ -1,0 +1,32 @@
+{
+  "_embedded": {
+    "records": [
+      {
+        "source_asset_type": "credit_alphanum4",
+        "source_asset_code": "18",
+        "source_asset_issuer": "GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX",
+        "source_amount": "0.0010000",
+        "destination_asset_type": "credit_alphanum4",
+        "destination_asset_code": "USDC",
+        "destination_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+        "destination_amount": "0.9546793",
+        "path": [
+          {
+            "asset_type": "native"
+          }
+        ]
+      },
+      {
+        "source_asset_type": "credit_alphanum4",
+        "source_asset_code": "18",
+        "source_asset_issuer": "GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX",
+        "source_amount": "0.0010000",
+        "destination_asset_type": "credit_alphanum4",
+        "destination_asset_code": "USDC",
+        "destination_asset_issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+        "destination_amount": "0.9360584",
+        "path": []
+      }
+    ]
+  }
+}

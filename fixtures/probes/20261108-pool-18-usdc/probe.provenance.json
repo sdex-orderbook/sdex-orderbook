@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-08T04:41:34Z",
+  "script": "scripts/probe-pool.sh 18:GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN 0.0010000",
+  "horizon": "https://horizon.stellar.org",
+  "kind": "live read-only GETs, stored verbatim",
+  "requests": {
+    "pool": {"url": "https://horizon.stellar.org/liquidity_pools?reserves=18:GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX,USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN", "latest_ledger": "65365367"},
+    "strict-send": {"url": "https://horizon.stellar.org/paths/strict-send?source_asset_type=credit_alphanum4&source_asset_code=18&source_asset_issuer=GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX&source_amount=0.0010000&destination_assets=USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN", "latest_ledger": "65365369"},
+    "order-book": {"url": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=18&selling_asset_issuer=GBBBMSNN6ASLP36IB577XDUQTSLLSLAFHZTWNZO6AXTZ2KWTOJOM3AVX&buying_asset_type=credit_alphanum4&buying_asset_code=USDC&buying_asset_issuer=GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN", "latest_ledger": "65365369"}
+  }
+}
